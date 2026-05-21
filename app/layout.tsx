@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import { Inter, League_Spartan } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css'; // Global styles
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
@@ -13,7 +14,10 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${inter.variable} ${leagueSpartan.variable}`}>
-      <body className="font-sans antialiased" suppressHydrationWarning>{children}</body>
+      <body className="font-sans antialiased" suppressHydrationWarning>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
