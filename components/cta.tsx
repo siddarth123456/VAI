@@ -19,11 +19,11 @@ export function CTA() {
         className="max-w-4xl relative z-20"
       >
         <h2 className="text-[40px] leading-[1.05] sm:text-5xl md:text-6xl lg:text-[80px] font-extrabold font-display tracking-tight text-white mb-6 md:mb-8 max-w-3xl mx-auto drop-shadow-lg">
-          Ready to scale your <br className="hidden sm:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-brand-gold drop-shadow-[0_0_30px_rgba(231,200,90,0.3)]">operational intelligence?</span>
+          Ready to build reliable <br className="hidden sm:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-brand-gold drop-shadow-[0_0_30px_rgba(231,200,90,0.3)]">AI workflows?</span>
         </h2>
         <p className="text-base sm:text-lg lg:text-xl text-white/50 font-medium mb-10 md:mb-12 max-w-2xl mx-auto px-4">
-          Join leading enterprises building autonomous workflows and resilient infrastructure with VerroAI. 
+          Join early-stage and growing teams using VerroAI to build reliable AI-powered business operations. 
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-4 sm:px-0">

@@ -8,17 +8,17 @@ const steps = [
   {
     icon: Box,
     title: "Connect Data",
-    desc: "Ingest from APIs, databases, or streaming events natively."
+    desc: "Ingest from APIs, databases, or webhook events natively."
   },
   {
     icon: Zap,
-    title: "Apply Agents",
-    desc: "Deploy neural nodes that reason, extract, and format automatically."
+    title: "Process with AI",
+    desc: "Use language models to extract, format, and reason about your data."
   },
   {
     icon: Share2,
     title: "Execute Actions",
-    desc: "Push processed intelligence back into your operational tools."
+    desc: "Push processed data back into your operational tools securely."
   }
 ];
 
@@ -35,7 +35,7 @@ export function WorkflowEcosystem() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-[40px] leading-[1.05] md:text-5xl lg:text-[56px] font-extrabold font-display tracking-tight text-white mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
-            A cohesive ecosystem for autonomous workflows.
+            A clear path from event to action.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
@@ -44,7 +44,7 @@ export function WorkflowEcosystem() {
             transition={{ delay: 0.15, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-base md:text-lg text-white/50 font-medium"
           >
-            Go from raw events to executed actions in seconds. No complex orchestration, just straightforward intelligent pipelines.
+            Go from incoming data to automated action. No complex setup, just straightforward, reliable automated workflows.
           </motion.p>
         </div>
 

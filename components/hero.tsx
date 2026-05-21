@@ -38,34 +38,33 @@ export function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 glass-panel rounded-full mb-6 max-w-full">
           <span className="w-2 h-2 rounded-full bg-primary-yellow animate-pulse flex-shrink-0 shadow-[0_0_12px_rgba(231,200,90,0.8)]" />
-          <span className="text-[10px] sm:text-xs font-bold text-white/80 tracking-[0.2em] uppercase truncate">Built for Enterprise Scale</span>
+          <span className="text-[10px] sm:text-xs font-bold text-white/80 tracking-[0.2em] uppercase truncate">Operational Intelligence</span>
         </motion.div>
         
         <motion.h1 
           variants={itemVariants} 
           className="text-[40px] leading-[1.05] sm:text-6xl lg:text-7xl xl:text-[80px] font-extrabold tracking-[-0.04em] text-white font-display mb-6 md:mb-8 drop-shadow-2xl max-w-[1000px] mx-auto px-2"
         >
-          The Future Operating System <br className="hidden md:block" />
-          for <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory via-brand-yellow to-brand-amber">AI-Powered Businesses.</span>
+          AI infrastructure for <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory via-brand-yellow to-brand-amber">business operations.</span>
         </motion.h1>
         
         <motion.p 
           variants={itemVariants} 
           className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl mb-10 md:mb-12 leading-relaxed font-medium px-4"
         >
-          VerroAI builds self-healing infrastructure for modern enterprises. 
-          Deploy autonomous systems that adapt, compute, and scale with intelligent precision.
+          VerroAI provides the infrastructure for startups and growing teams to build reliable AI workflows. Connect language models to your daily operations with predictable, secure execution.
         </motion.p>
         
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0 mt-4">
           <Link href="/demo" className="group flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-3.5 sm:py-4 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base">
-            Book an Executive Demo
+            Book a Demo
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
           
           <Link href="/platform" className="flex items-center justify-center gap-2 glass-button px-8 py-3.5 sm:py-4 rounded-full font-semibold w-full sm:w-auto hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base text-white">
             <Terminal className="w-4 h-4 text-white/50" />
-            Explore Architecture
+            Explore Platform
           </Link>
         </motion.div>
         

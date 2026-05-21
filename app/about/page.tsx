@@ -4,10 +4,10 @@ import React from 'react';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
 import { motion } from 'motion/react';
-import { Users, Award, Shield, CheckCircle, TrendingUp, Cpu, Sparkles, Code, Globe } from 'lucide-react';
+import { Compass, Sparkles, Server, Cpu, Target, Eye, Database, ShieldAlert, LineChart, Code2 } from 'lucide-react';
 
 const fadeUp: any = {
-  hidden: { opacity: 0, y: 30, filter: 'blur(10px)' },
+  hidden: { opacity: 0, y: 30, filter: 'blur(8px)' },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
@@ -16,50 +16,10 @@ const fadeUp: any = {
   })
 };
 
-const team = [
-  {
-    name: "Marcus Verron",
-    role: "Co-Founder & CEO",
-    bio: "Ex-Google Brain Staff Research Scientist. M.S. in Computer Science (Stanford AI Lab). Pioneer in symbolic agent reasoning architectures.",
-    avatarBg: "bg-gradient-to-br from-brand-yellow/30 to-brand-gold/60"
-  },
-  {
-    name: "Dr. Helen Zhao",
-    role: "Co-Founder & CTO",
-    bio: "PhD in Distributed Cloud Systems from MIT. Former Principal Engineer at Palantir and Staff Architect at VMware. Architect of elite edge fabrics.",
-    avatarBg: "bg-gradient-to-br from-brand-ivory/30 to-brand-amber/60"
-  },
-  {
-    name: "Siddharth Choudhary",
-    role: "VP of Enterprise Engineering",
-    bio: "Ex-Stripe Core Platform Lead. Builder of mission-critical orchestration systems serving trillions of requests globally.",
-    avatarBg: "bg-gradient-to-br from-brand-yellow/20 to-brand-ivory/40"
-  }
-];
-
-const advisors = [
-  {
-    name: "Prof. Alan Vance",
-    role: "Academic Advisor",
-    org: "Professor of AI at Stanford, ex-Director at Google Research. Pioneer in autonomous error-correction systems."
-  },
-  {
-    name: "Sarah Jenkins",
-    role: "Infrastructure Advisor",
-    org: "Former VP of Infrastructure at Stripe. Leading advisor on hyperscale systems compliance."
-  }
-];
-
-const milestones = [
-  { year: "Q1 2025", title: "VerroAI Launched", desc: "Spun out of MIT & Stanford research labs; secured $4.2M seed financing led by Tier-1 Silicon Valley VCs." },
-  { year: "Q3 2025", title: "v1 Intelligent Agent Layer", desc: "Released core routing engine, achieving sub-50ms self-healing actions on private testbeds." },
-  { year: "Q1 2026", title: "Enterprise Compliance Node", desc: "Achieved full SOC2 Type II audit readiness and launched Google Cloud Partnership tier." },
-  { year: "Q4 2026 (Roadmap)", title: "Fully Autonomous Infrastructure mesh", desc: "Deployment of cross-tenant federated self-correction modules for fortune-500 hyper-clouds." }
-];
-
 export default function AboutPage() {
   return (
-    <main id="about-page" className="min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-yellow selection:text-black relative">
+    <main id="about-page" className="min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-yellow selection:text-black relative bg-[#020202]">
+      {/* Background Ornaments */}
       <div className="ambient-background" />
       <div className="vignette" />
       <div className="grain-overlay" />
@@ -67,17 +27,17 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 relative z-10 w-full flex-grow">
         
-        {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-20">
+        {/* SECTION 1: HERO & MISSION */}
+        <div className="max-w-4xl mx-auto text-center mb-24">
           <motion.div 
             custom={0}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/15 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/10 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase mb-6"
           >
-            <Users className="w-3.5 h-3.5 text-brand-yellow" />
-            Company & Credibility
+            <Compass className="w-3.5 h-3.5 text-brand-yellow" />
+            Our Mission
           </motion.div>
           
           <motion.h1 
@@ -85,10 +45,10 @@ export default function AboutPage() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6"
+            className="text-[40px] leading-[1.05] sm:text-5xl lg:text-7xl font-extrabold font-display tracking-tight text-white mb-6"
           >
-            Built for Scale. <br />
-            Rooted in <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Academic Rigor.</span>
+            Building infrastructure for <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">AI workflows.</span>
           </motion.h1>
           
           <motion.p 
@@ -96,154 +56,216 @@ export default function AboutPage() {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="text-base sm:text-lg text-white/60 font-medium leading-relaxed max-w-2xl mx-auto"
+            className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto mb-8"
           >
-            VerroAI was founded by former Google Brain researchers and MIT systems architects. We build the operating system for autonomous enterprise scale-up operations.
+            We are building VerroAI to solve a critical challenge for modern teams: bridging the gap between raw AI reasoning and reliable business operations.
           </motion.p>
         </div>
 
-        {/* Core Vision Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          {[
-            {
-              icon: Shield,
-              title: "Enterprise Legitimacy",
-              desc: "From SOC2 Type II frameworks to dedicated VPC clusters, we hold our platform to military-grade compliance and transaction parameters."
-            },
-            {
-              icon: Cpu,
-              title: "Autonomous Native",
-              desc: "We bypass standard conditional logic queues in favor of intent-driven, neural network agent layers that actively self-heal."
-            },
-            {
-              icon: Sparkles,
-              title: "VC Backed Security",
-              desc: "Supported by prominent deep-tech venture houses and active partners in Google for Startups Accelerator labs."
-            }
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              custom={i + 3}
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-brand-yellow/30 hover:bg-white/10 transition-all backdrop-blur-md"
-            >
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 text-brand-yellow">
-                <item.icon className="w-5 h-5" />
+        {/* SECTION 2: VISION STATEMENT */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-28 border-t border-white/10 pt-16">
+          <div className="lg:col-span-5">
+            <span className="text-xs font-bold font-mono text-brand-gold uppercase tracking-wider block mb-2">Our Vision</span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display tracking-tight text-white mb-6">
+              AI needs operational infrastructure.
+            </h2>
+            <p className="text-sm sm:text-base text-white/50 leading-relaxed font-semibold mb-6">
+              Modern enterprises have access to powerful language models. The challenge is deploying them into live, high-throughput pipelines where reliability matters. 
+            </p>
+            <p className="text-xs sm:text-sm text-white/40 leading-relaxed font-semibold">
+              VerroAI provides the infrastructure to build secure and predictable AI workflows. We give teams the deterministic feedback loops, security constraints, and execution environments needed to turn raw AI outputs into guaranteed actions.
+            </p>
+          </div>
+          <div className="lg:col-span-7 bg-white/[0.02] border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
+            <h4 className="font-mono text-xs uppercase tracking-wider text-brand-gold mb-6 border-b border-white/5 pb-4">Core Principles</h4>
+            
+            <div className="space-y-6">
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                  <Server className="w-4 h-4" />
+                </div>
+                <div>
+                  <h5 className="font-bold text-white text-sm">Predictable Execution</h5>
+                  <p className="text-xs text-white/50 leading-relaxed font-semibold mt-1">
+                    Every automated task executes inside isolated environments. We enforce strict data schemas before models interact with your core systems.
+                  </p>
+                </div>
               </div>
-              <h3 className="font-bold text-white text-lg mb-2">{item.title}</h3>
-              <p className="text-sm text-white/50 leading-relaxed font-medium">{item.desc}</p>
-            </motion.div>
-          ))}
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-lg bg-brand-yellow/10 border border-brand-yellow/20 flex items-center justify-center text-brand-gold shrink-0">
+                  <Database className="w-4 h-4" />
+                </div>
+                <div>
+                  <h5 className="font-bold text-white text-sm">Secure Integrations</h5>
+                  <p className="text-xs text-white/50 leading-relaxed font-semibold mt-1">
+                    Direct integration into high-performance message brokers, transaction databases, and internal APIs using managed OAuth and API keys.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-lg bg-orange-400/10 border border-orange-400/20 flex items-center justify-center text-orange-400 shrink-0">
+                  <Cpu className="w-4 h-4" />
+                </div>
+                <div>
+                  <h5 className="font-bold text-white text-sm">Performance Control</h5>
+                  <p className="text-xs text-white/50 leading-relaxed font-semibold mt-1">
+                    Control costs and latency by routing workflows to the appropriate models based on task complexity.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Founding Team */}
-        <div className="mb-24">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Leadership Behind VerroAI</h2>
-            <p className="text-sm sm:text-base text-white/50 max-w-lg mx-auto">Venture-scale pedigree combining hyper-growth enterprise scaling with core neural AI research.</p>
+        {/* SECTION 3: FOCUS AREAS */}
+        <div className="mb-28">
+          <div className="text-center max-w-xl mx-auto mb-16">
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display tracking-tight text-white mb-4">Our Focus Areas</h2>
+            <p className="text-sm text-white/50 font-semibold leading-relaxed">We develop hyper-specific tooling to tackle infrastructure limitations in enterprise deployment.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <motion.div
-                key={i}
-                custom={i + 5}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-                className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-2xl relative flex flex-col justify-between hover:border-brand-yellow/20 transition-all group"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Cpu,
+                title: "Operational Tooling",
+                desc: "Active workflow engines that monitor state drift, handle latency, and manage execution errors."
+              },
+              {
+                icon: Code2,
+                title: "AI Workflows",
+                desc: "Code-first task-sequence definition with strict fallbacks, data schema validation, and typed outputs."
+              },
+              {
+                icon: Target,
+                title: "Automation Systems",
+                desc: "Trigger-ready, repeatable microservices designed to integrate directly with webhook events from your existing tools."
+              },
+              {
+                icon: ShieldAlert,
+                title: "Data Privacy",
+                desc: "Protect sensitive data and PII before it reaches external language models."
+              }
+            ].map((focus, idx) => (
+              <div 
+                key={idx}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md hover:border-brand-yellow/20 hover:bg-white/[0.08] transition-all"
               >
-                <div className="p-6">
-                  {/* Decorative Profile Icon/Initial */}
-                  <div className={`w-14 h-14 rounded-full ${member.avatarBg} flex items-center justify-center mb-6`}>
-                    <span className="text-xl font-bold font-display text-white">{member.name.split(' ')[0][0]}{member.name.split(' ')[1][0]}</span>
-                  </div>
-                  <h3 className="font-bold text-xl text-white group-hover:text-brand-yellow transition-colors">{member.name}</h3>
-                  <div className="text-xs font-bold text-brand-gold uppercase tracking-wider mb-4">{member.role}</div>
-                  <p className="text-sm text-white/50 leading-relaxed font-medium">{member.bio}</p>
+                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 text-brand-yellow">
+                  <focus.icon className="w-5 h-5" />
                 </div>
-                
-                <div className="border-t border-white/15 p-4 bg-white/[0.02] flex items-center justify-between text-xs font-bold text-white/40">
-                  <span>Verified Credentials</span>
-                  <div className="flex gap-1.5">
-                    <span className="px-2 py-0.5 rounded bg-white/5 text-white/60">AI Lab</span>
-                    <span className="px-2 py-0.5 rounded bg-brand-yellow/10 text-brand-gold">M.S.</span>
-                  </div>
-                </div>
-              </motion.div>
+                <h3 className="font-bold text-white text-base mb-2">{focus.title}</h3>
+                <p className="text-xs sm:text-sm text-white/45 leading-relaxed font-medium">{focus.desc}</p>
+              </div>
             ))}
           </div>
         </div>
 
-        {/* Advisory Board & Backers */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md">
-            <h3 className="font-bold text-xl text-white mb-6 flex items-center gap-2">
-              <Award className="w-5 h-5 text-brand-yellow" />
-              Strategic Advisory
-            </h3>
-            <div className="space-y-6">
-              {advisors.map((adv, i) => (
-                <div key={i} className="flex gap-4 border-l-2 border-brand-yellow/30 pl-4 py-1">
-                  <div>
-                    <h4 className="font-bold text-white text-base">{adv.name}</h4>
-                    <p className="text-xs font-bold text-brand-gold mb-1.5">{adv.role}</p>
-                    <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-medium">{adv.org}</p>
-                  </div>
+        {/* SECTION 4: PRODUCT ECOSYSTEM OVERVIEW */}
+        <div className="bg-white/[0.02] border border-white/10 rounded-3xl p-8 sm:p-12 mb-28 relative overflow-hidden backdrop-blur-md">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-brand-yellow/5 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-4">
+              <span className="text-[10px] font-bold font-mono text-brand-gold uppercase tracking-wider block mb-2">Systems Architecture</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-4">The VerroAI Platform</h2>
+              <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-semibold mb-6">
+                Our technology platform operates as a cohesive stack, allowing teams to build, manage, and scale AI workflows easily.
+              </p>
+              
+              <div className="border-t border-white/15 pt-6 flex items-center gap-4">
+                <div className="text-center">
+                  <div className="text-white font-bold font-mono text-lg">99.9%</div>
+                  <div className="text-[9px] text-white/40 uppercase tracking-widest font-black">Uptime Target</div>
+                </div>
+                <div className="h-8 w-px bg-white/10" />
+                <div className="text-center">
+                  <div className="text-[#E7C85A] font-bold font-mono text-lg">SOC2</div>
+                  <div className="text-[9px] text-white/40 uppercase tracking-widest font-black">Compliance</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                {
+                  tier: "Step 01: Ingress",
+                  title: "Event Routing Engine",
+                  desc: "Handles incoming webhook streams, queue ingestion, and parses commands into actionable, structured micro-tasks."
+                },
+                {
+                  tier: "Step 02: Verification",
+                  title: "Inline Guardrails",
+                  desc: "Validates all context vectors before they hit generative model APIs, preventing data schema pollution or data leaks."
+                },
+                {
+                  tier: "Step 03: Processing",
+                  title: "Managed Execution",
+                  desc: "Fires isolated, light sandbox runtime environments where custom automation scripts and LLM prompts are executed."
+                },
+                {
+                  tier: "Step 04: Analytics",
+                  title: "Observability Logs",
+                  desc: "Guarantees complete state logging with timeline histories, allowing engineers to debug prompts and model behavior."
+                }
+              ].map((ecosystem, i) => (
+                <div key={i} className="p-5 bg-black/40 border border-white/5 rounded-xl text-left">
+                  <span className="text-[9px] font-mono font-bold text-brand-gold uppercase tracking-wide block mb-1">{ecosystem.tier}</span>
+                  <h4 className="font-bold text-white text-sm mb-1.5">{ecosystem.title}</h4>
+                  <p className="text-[11px] text-white/40 leading-relaxed font-medium">{ecosystem.desc}</p>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 backdrop-blur-md flex flex-col justify-between">
+        {/* SECTION 5: CORPORATE HISTORY & COMPLIANCE STANCE */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          
+          <div className="bg-[#050505] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
             <div>
-              <h3 className="font-bold text-xl text-white mb-4 flex items-center gap-2">
-                <Shield className="w-5 h-5 text-brand-yellow" />
-                Seed Investors & Support
-              </h3>
-              <p className="text-sm sm:text-base text-white/60 leading-relaxed font-medium mb-6">
-                VerroAI is backed by premium Tier-1 global seed funds, active tech angel circles, and Google Cloud's Venture-Scale Startup Credits Framework. 
+              <span className="text-[10px] font-bold font-mono text-brand-gold uppercase tracking-widest block mb-1">Company Status</span>
+              <h3 className="text-xl font-bold font-display text-white mb-4">Startup DNA</h3>
+              <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-semibold mb-6">
+                We are an early-stage team of engineers focused on building robust, reliable tools for developers and operators rather than speculative AI products.
+              </p>
+            </div>
+            <div className="bg-white/5 rounded-xl border border-white/15 p-4 text-left">
+              <div className="text-xs font-bold text-white flex items-center gap-2 mb-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                Security First
+              </div>
+              <p className="text-[11px] text-white/40 leading-normal font-semibold">
+                VerroAI is built with security as a priority, targeting core compliance standards for growing companies.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-[#050505] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-bold font-mono text-brand-gold uppercase tracking-widest block mb-1">Ecosystem Status</span>
+              <h3 className="text-xl font-bold font-display text-white mb-4">Backed by Builders</h3>
+              <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-semibold">
+                VerroAI is a venture-backed startup supported by leading infrastructure developers. We operate on managed cloud partner networks to ensure stable deployments for our customers.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-6">
-              <div className="p-3 bg-white/5 border border-white/5 rounded-xl text-center">
-                <div className="text-white font-bold text-lg leading-tight font-display">SECURE</div>
-                <div className="text-[10px] text-white/40 uppercase tracking-widest font-black">Capital Ratio</div>
+            <div className="flex gap-4 border-t border-white/5 pt-6 mt-6">
+              <div>
+                <span className="text-[9px] text-white/30 uppercase tracking-widest block font-bold">Cloud Infrastructure</span>
+                <span className="text-white text-xs font-bold font-mono">Managed VPC</span>
               </div>
-              <div className="p-3 bg-white/5 border border-white/5 rounded-xl text-center">
-                <div className="text-brand-yellow font-bold text-lg leading-tight font-display">$4.2M</div>
-                <div className="text-[10px] text-white/40 uppercase tracking-widest font-black">Seed Round Raised</div>
+              <div className="w-px bg-white/10 h-8" />
+              <div>
+                <span className="text-[9px] text-white/30 uppercase tracking-widest block font-bold">Company Stage</span>
+                <span className="text-white text-xs font-bold font-mono">Early Stage</span>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Milestones & Roadmap */}
-        <div className="border border-white/10 rounded-3xl bg-white/[0.02] p-8 backdrop-blur-md overflow-hidden relative">
-          <div className="absolute top-0 right-0 p-8 text-brand-yellow/10 pointer-events-none">
-            <TrendingUp className="w-32 h-32" />
-          </div>
-          
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-8">Evolution & Roadmap</h2>
-          
-          <div className="relative border-l border-white/10 ml-4 pl-8 space-y-8">
-            {milestones.map((m, i) => (
-              <div key={i} className="relative group">
-                {/* Node Dot */}
-                <div className="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-bg-dark border-2 border-brand-yellow flex items-center justify-center">
-                  <div className="w-2 h-2 rounded-full bg-brand-yellow group-hover:scale-125 transition-transform" />
-                </div>
-                <div>
-                  <span className="text-xs font-bold text-brand-gold bg-brand-yellow/10 px-2 py-0.5 rounded-full border border-brand-yellow/20">{m.year}</span>
-                  <h4 className="font-bold text-lg text-white mt-2 mb-1">{m.title}</h4>
-                  <p className="text-xs sm:text-sm text-white/50 leading-relaxed font-medium max-w-3xl">{m.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
       </div>

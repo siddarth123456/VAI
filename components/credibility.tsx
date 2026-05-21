@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 const companies = [
-  "Acme Corp", "Quantum", "Nexus AI", "Globex", "Initech", "Stark Ind"
+  "Acme Corp", "ClearScale", "Nexus Operations", "Globex", "Initech", "Vantage"
 ];
 
 export function Credibility() {
@@ -12,7 +12,7 @@ export function Credibility() {
     <section className="py-10 md:py-12 border-t border-b border-white/5 bg-transparent relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <p className="text-center text-xs md:text-sm font-bold text-white/40 uppercase tracking-[0.2em] mb-6 md:mb-8 px-4">
-          Powering operational intelligence for industry leaders
+          Trusted by engineering teams building modern workflows
         </p>
         <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-20 opacity-60 px-4">
           {companies.map((company, i) => (

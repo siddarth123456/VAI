@@ -47,7 +47,7 @@ export default function EnterprisePage() {
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Scale-up safely with SOC2 Type II frameworks, dedicated single-tenant VPC partitions, and strict financial latency bounds integrated directly into your infrastructure contracts.
+            Scale-up safely with SOC2 Type II frameworks, dedicated single-tenant VPC partitions, and strict latency bounds integrated directly into your infrastructure contracts.
           </p>
         </div>
 
@@ -56,17 +56,17 @@ export default function EnterprisePage() {
           {[
             {
               icon: ShieldCheck,
-              title: "SOC2 Type II Audit Clean",
+              title: "SOC2 Compliance",
               desc: "Fully audited security access logs, process isolates, and encrypted pipeline storage databases. Ready to pass your risk diligence review in under 24 hours."
             },
             {
               icon: Server,
-              title: "Single-Tenant VPC Boundary",
+              title: "Dedicated Environments",
               desc: "Isolate your inference flows on dedicated secure clusters in Google Cloud peering boundaries. Zero multi-tenant memory leak risks or variable queue spikes."
             },
             {
               icon: FileSignature,
-              title: "Financial Latency Guarantees",
+              title: "Latency SLAs",
               desc: "Every contract features inline performance SLA tiers. If mean latency scores exceed threshold limits, automated refunds are issued dynamically."
             }
           ].map((item, i) => (
@@ -86,7 +86,7 @@ export default function EnterprisePage() {
         {/* Custom SLA contract builder widget */}
         <div className="border border-white/10 rounded-3xl bg-white/[0.02] p-6 sm:p-10 backdrop-blur-md overflow-hidden relative mb-24">
           <div className="mb-10 text-center lg:text-left max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-3">Modular SLA Proposal Compiler</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-3">Enterprise Quoting</h2>
             <p className="text-sm sm:text-base text-white/50 leading-relaxed font-semibold">
               Leverage selectors below to build and refine custom SLA metrics, calculating estimated contract bounds and drafting pilot parameters on-the-fly.
             </p>
@@ -115,7 +115,7 @@ export default function EnterprisePage() {
 
               {/* Security peers checkboxes */}
               <div className="space-y-3">
-                <span className="text-xs font-bold font-mono text-white/40 uppercase tracking-widest block">Peering Compliance Integrations</span>
+                <span className="text-xs font-bold font-mono text-white/40 uppercase tracking-widest block">Compliance Options</span>
                 
                 <label className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5 cursor-pointer">
                   <input
@@ -125,7 +125,7 @@ export default function EnterprisePage() {
                     className="accent-brand-yellow w-4 h-4 rounded"
                   />
                   <div>
-                    <div className="text-xs font-bold text-white">Full SSO Saml2 Security</div>
+                    <div className="text-xs font-bold text-white">Full SSO Security</div>
                     <div className="text-[10px] text-white/45">Peered directly with Okta or Azure AD directories.</div>
                   </div>
                 </label>
@@ -148,7 +148,7 @@ export default function EnterprisePage() {
               <div className="space-y-2">
                 <span className="text-xs font-bold font-mono text-white/40">Guaranteed Availability SLA</span>
                 <div className="grid grid-cols-2 gap-2">
-                  {["99.9% Core", "99.99% Ultra"].map((tier) => (
+                  {["99.9%", "99.99%"].map((tier) => (
                     <button
                       key={tier}
                       onClick={() => setAvailabilitySLA(tier)}
@@ -163,20 +163,20 @@ export default function EnterprisePage() {
             </div>
 
             {/* Generated SLA PDF/Document Preview */}
-            <div className="lg:col-span-6 bg-black border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[340px] shadow-2xl relative">
+            <div className="lg:col-span-6 bg-black border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[340px] shadow-22xl relative">
               <div className="absolute top-6 right-6 font-mono text-[9px] bg-white/10 text-white/50 font-bold px-2 py-0.5 rounded tracking-widest uppercase">Draft Proposal</div>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-brand-yellow font-bold text-xs uppercase tracking-wider font-mono">
                   <FileText className="w-4 h-4" />
-                  <span>Corporate SLA Pilot Agreement</span>
+                  <span>Enterprise Contract Estimates</span>
                 </div>
                 
                 <div className="space-y-3 font-mono text-[10px] sm:text-xs text-white/70 leading-relaxed border-t border-white/10 pt-4">
                   <p>&gt; Target Mean Latency Caps SLA: <strong className="text-white">{latencyCeiling}ms</strong></p>
-                  <p>&gt; Single-Tenant VPC isolation: <strong className="text-brand-yellow">{dedicatedVPC ? "Designated VPN Tunnel Peered" : "By-Pass (Shared Sandbox Compute)"}</strong></p>
-                  <p>&gt; Availability threshold: <strong className="text-white">{availabilitySLA === "99.99% Ultra" ? "99.99% Active Multi-region redundant" : "99.9% Standard Engine"}</strong></p>
-                  <p>&gt; Federated Okta SSO Integration: <strong className="text-white">{targetSSO ? "Configured" : "Bypass (Custom secret handles API)"}</strong></p>
+                  <p>&gt; Single-Tenant VPC isolation: <strong className="text-brand-yellow">{dedicatedVPC ? "Designated VPN Tunnel Peered" : "By-Pass"}</strong></p>
+                  <p>&gt; Availability threshold: <strong className="text-white">{availabilitySLA === "99.99%" ? "99.99% Multi-region redundant" : "99.9%"}</strong></p>
+                  <p>&gt; Federated Okta SSO Integration: <strong className="text-white">{targetSSO ? "Configured" : "Bypass"}</strong></p>
                 </div>
               </div>
 
@@ -190,7 +190,7 @@ export default function EnterprisePage() {
                   onClick={() => alert(`Pilot agreement template successfully generated for estimated monthly rate of $${calculatedServiceFee.toLocaleString()}. Our accounts representative will reach out shortly.`)}
                   className="bg-white text-black text-xs font-bold px-4 py-2.5 rounded-lg hover:bg-white/95 transition-all text-center flex items-center gap-1.5"
                 >
-                  Confirm Parameters & PDF Export
+                  Generate Outline
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>

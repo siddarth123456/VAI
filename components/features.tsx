@@ -7,23 +7,23 @@ import { Database, Workflow, Shield, Network, Zap, Cpu, ArrowRight } from 'lucid
 const features = [
   {
     icon: <Workflow className="w-6 h-6 text-brand-yellow" />,
-    title: "Autonomous Workflows",
-    description: "Build self-healing pipelines that adapt to data anomalies in real time without human intervention."
+    title: "Reliable AI Workflows",
+    description: "Build automated processes that use language models to categorize, route, and respond to operational data."
   },
   {
     icon: <Database className="w-6 h-6 text-brand-gold" />,
-    title: "Vector-Native Architecture",
-    description: "Every data point is inherently searchable, accessible, and queryable via high-dimensional embeddings."
+    title: "Structured Outputs",
+    description: "Force language models to return strict, schemas-validated data that your existing systems can understand."
   },
   {
     icon: <Shield className="w-6 h-6 text-brand-ivory" />,
-    title: "Enterprise Grade Security",
-    description: "SOC2 compliant by default. Role-based access control with granular API token scopes."
+    title: "Secure Execution",
+    description: "Run AI operations in sandboxed environments with clear access controls and audit logging."
   },
   {
     icon: <Network className="w-6 h-6 text-brand-amber" />,
-    title: "Global Edge Network",
-    description: "Execute AI models at the edge for sub-50ms latency across 35 regions worldwide."
+    title: "Managed Integrations",
+    description: "Connect safely to your databases and APIs with managed authentication and automated error recovery."
   },
 ];
 
@@ -93,8 +93,8 @@ export function Features() {
             <div className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 bg-brand-yellow/10 border border-brand-yellow/20 rounded-full mb-6 md:mb-8 shadow-[0_0_15px_rgba(231,200,90,0.1)]">
                <span className="text-[10px] md:text-xs font-bold text-brand-yellow tracking-[0.1em] uppercase">Architecture</span>
             </div>
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-display text-white mb-4 md:mb-6 tracking-tight drop-shadow-sm">Infrastructure as AI</h3>
-            <p className="text-sm md:text-base lg:text-lg text-white/60 font-medium leading-relaxed">Stop writing brittle glue code. Express your operational logic in natural language and let VerroAI compile it into resilient, scalable systems that execute autonomously.</p>
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-display text-white mb-4 md:mb-6 tracking-tight drop-shadow-sm">Code-First Workflows</h3>
+            <p className="text-sm md:text-base lg:text-lg text-white/60 font-medium leading-relaxed">VerroAI helps engineering teams connect AI to their business logic. Use our platform to manage prompts, handle model latency, and ensure the data coming back is ready for production.</p>
           </div>
           
           <div className="w-full xl:w-auto flex flex-col gap-3 md:gap-4 min-w-full sm:min-w-[320px] z-10 relative">
@@ -103,27 +103,27 @@ export function Features() {
                  <div className="p-2 bg-white/5 rounded-lg group-hover:bg-brand-yellow/20 transition-colors">
                    <Cpu className="w-4 h-4 md:w-5 md:h-5 text-white/50 group-hover:text-brand-yellow flex-shrink-0 transition-colors" />
                  </div>
-                 <span className="text-xs md:text-sm font-bold text-white/90">Compute Cluster</span>
+                 <span className="text-xs md:text-sm font-bold text-white/90">Managed Execution</span>
                </div>
-               <span className="text-[10px] md:text-xs font-bold font-mono text-brand-yellow drop-shadow-[0_0_8px_rgba(231,200,90,0.8)]">Auto-scaling</span>
+               <span className="text-[10px] md:text-xs font-bold font-mono text-brand-yellow drop-shadow-[0_0_8px_rgba(231,200,90,0.8)]">Sandboxed</span>
             </div>
             <div className="flex items-center justify-between p-4 md:p-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-md shadow-inner group transition-all hover:bg-black/60 hover:border-white/10">
                <div className="flex items-center gap-3 md:gap-4">
                  <div className="p-2 bg-white/5 rounded-lg group-hover:bg-[#10B981]/20 transition-colors">
                    <Database className="w-4 h-4 md:w-5 md:h-5 text-white/50 group-hover:text-[#10B981] flex-shrink-0 transition-colors" />
                  </div>
-                 <span className="text-xs md:text-sm font-bold text-white/90">Vector Storage</span>
+                 <span className="text-xs md:text-sm font-bold text-white/90">Schema Validation</span>
                </div>
-               <span className="text-[10px] md:text-xs font-bold font-mono text-[#10B981] drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">Connected</span>
+               <span className="text-[10px] md:text-xs font-bold font-mono text-[#10B981] drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]">Enforced</span>
             </div>
             <div className="flex items-center justify-between p-4 md:p-5 rounded-2xl bg-black/40 border border-white/5 backdrop-blur-md shadow-inner group transition-all hover:bg-black/60 hover:border-white/10">
                <div className="flex items-center gap-3 md:gap-4">
                  <div className="p-2 bg-white/5 rounded-lg group-hover:bg-white/10 transition-colors">
                    <Network className="w-4 h-4 md:w-5 md:h-5 text-white/50 group-hover:text-white flex-shrink-0 transition-colors" />
                  </div>
-                 <span className="text-xs md:text-sm font-bold text-white/90">Neural Edge</span>
+                 <span className="text-xs md:text-sm font-bold text-white/90">Audit Logs</span>
                </div>
-               <span className="text-[10px] md:text-xs font-bold font-mono text-white/40">35 Regions</span>
+               <span className="text-[10px] md:text-xs font-bold font-mono text-white/40">Visible</span>
             </div>
           </div>
         </motion.div>

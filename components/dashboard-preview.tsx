@@ -64,8 +64,8 @@ export function DashboardPreview() {
           
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-8 gap-4">
             <div>
-              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1">Operational Overview</h2>
-              <p className="text-white/50 text-xs md:text-sm">System intelligence and automation metrics for the current billing cycle.</p>
+              <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1">Workflow Overview</h2>
+              <p className="text-white/50 text-xs md:text-sm">Workflow execution metrics for the current cycle.</p>
             </div>
             <div className="flex flex-wrap gap-2 md:gap-3">
               <div className="bg-white/5 border border-white/10 shadow-[0_2px_10px_rgba(0,0,0,0.2)] rounded-lg px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-white/80 flex items-center gap-2">
@@ -101,8 +101,8 @@ export function DashboardPreview() {
               >
                 <div className="relative z-10 flex justify-between items-start mb-6 md:mb-8">
                   <div>
-                    <h3 className="font-bold text-white text-base md:text-lg mb-0.5 md:mb-1">Compute throughput</h3>
-                    <p className="text-white/50 text-xs md:text-sm">Real-time vector operations passing through neural edge</p>
+                    <h3 className="font-bold text-white text-base md:text-lg mb-0.5 md:mb-1">Task throughput</h3>
+                    <p className="text-white/50 text-xs md:text-sm">Real-time workflows executing across the platform</p>
                   </div>
                   <button className="text-white/40 hover:text-white p-1.5 md:p-2 rounded-md hover:bg-white/5 transition-colors"><BarChart3 className="w-4 h-4 md:w-5 md:h-5" /></button>
                 </div>
@@ -160,28 +160,28 @@ export function DashboardPreview() {
                 <div className="flex justify-between items-center mb-5 md:mb-6 relative z-10">
                   <h3 className="font-bold text-white text-base md:text-lg flex items-center gap-2">
                     <Bot className="w-4 h-4 md:w-5 md:h-5 text-brand-yellow" />
-                    System Insights
+                    Execution Insights
                   </h3>
                 </div>
                 
                 <div className="flex flex-col gap-4 md:gap-5 mt-auto relative z-10">
                   <InsightRow 
                     icon={Zap}
-                    title="Optimization Applied" 
-                    desc="Query latency reduced by 18% via distributed caching." 
+                    title="Performance Improved" 
+                    desc="Average workflow execution time decreased by 18%." 
                   />
                   <div className="w-full h-px bg-white/5"></div>
                   <InsightRow 
                     icon={GitMerge}
-                    title="Traffic Bottleneck" 
-                    desc="Pipeline 'ETL-CR-09' scaling horizontally to prevent drops." 
+                    title="Queue Building" 
+                    desc="Pipeline 'InvoiceProcessor' scaling to handle increased load." 
                     isWarning
                   />
                   <div className="w-full h-px bg-white/5"></div>
                   <InsightRow 
                     icon={CheckCircle2}
-                    title="Anomaly Detected & Fixed" 
-                    desc="Irregular request pattern blocked by Neural Edge." 
+                    title="Validation Failed" 
+                    desc="Malformed payload rejected before model execution." 
                   />
                 </div>
                 

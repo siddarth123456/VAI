@@ -48,7 +48,7 @@ export function DashboardShowcase() {
               transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[36px] leading-[1.05] md:text-5xl lg:text-[56px] font-extrabold font-display tracking-tight text-white mb-4 md:mb-6 drop-shadow-sm"
             >
-              See exactly how your system thinks.
+              Monitor execution in real-time.
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
@@ -147,7 +147,7 @@ export function DashboardShowcase() {
               
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
-                  <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1 md:mb-2 drop-shadow-sm">Executive Intelligence Overview</h1>
+                  <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1 md:mb-2 drop-shadow-sm">Platform Operations</h1>
                   <p className="text-white/60 text-xs md:text-sm font-medium">Monitoring 2.4M automated events over the last 24 hours.</p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -245,7 +245,7 @@ export function DashboardShowcase() {
                       <Terminal className="w-16 h-16 md:w-24 md:h-24 text-white" strokeWidth={1} />
                     </div>
                     
-                    <h3 className="font-bold text-white text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wider z-10 relative drop-shadow-sm">Core Neural Efficiency</h3>
+                    <h3 className="font-bold text-white text-xs md:text-sm mb-3 md:mb-4 uppercase tracking-wider z-10 relative drop-shadow-sm">System Reliability</h3>
                     
                     <div className="flex items-end gap-3 md:gap-4 z-10 relative">
                       <div className="text-[40px] md:text-[56px] leading-[1] font-extrabold font-display tracking-tight text-white flex items-start drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
@@ -253,7 +253,7 @@ export function DashboardShowcase() {
                       </div>
                       <div className="pb-1 md:pb-2">
                         <div className="text-[10px] md:text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md mb-1">+0.4%</div>
-                        <div className="text-[10px] md:text-xs font-medium text-white/50">Routing Optimal</div>
+                        <div className="text-[10px] md:text-xs font-medium text-white/50">Uptime Healthy</div>
                       </div>
                     </div>
                   </div>

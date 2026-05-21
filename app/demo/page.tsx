@@ -9,30 +9,29 @@ import { Sparkles, ArrowRight, HelpCircle, User, Mail, Calendar, Building, Messa
 const counselorQuestions = [
   {
     step: 0,
-    text: "Welcome to VerroAI Enterprise Pilot center. What is your estimated monthly transactional API load?",
+    text: "Welcome to the VerroAI demo. What kinds of workflows are you looking to automate?",
     options: [
-      { label: "Under 1M Actions", nextScore: 100 },
-      { label: "1M to 50M Actions (Scales Quick)", nextScore: 500 },
-      { label: "50M+ Hyperscale (SOC2 Peered)", nextScore: 2000 }
+      { label: "Data classification & extraction", nextScore: 100 },
+      { label: "Customer support routing", nextScore: 200 },
+      { label: "Internal operations & alerting", nextScore: 300 }
     ]
   },
   {
     step: 1,
-    text: "Excellent. Which cloud environment does your enterprise utilize to peer with isolated clusters?",
+    text: "Got it. How many tasks per month do you expect to process?",
     options: [
-      { label: "Google Cloud Platform (GCP Preferred)", nextScore: 10 },
-      { label: "Amazon Web Services (AWS)", nextScore: 100 },
-      { label: "Microsoft Azure Node", nextScore: 200 },
-      { label: "On-Premises Dedicated Server", nextScore: 1000 }
+      { label: "Under 10,000", nextScore: 10 },
+      { label: "10,000 to 100,000", nextScore: 100 },
+      { label: "More than 100,000", nextScore: 500 }
     ]
   },
   {
     step: 2,
-    text: "Understood. What is the target latency limit bounds for your mission-critical pipelines?",
+    text: "Thanks. What is most important for your engineering team right now?",
     options: [
-      { label: "Under 200ms Mean (Fast-Heuristic)", nextScore: 800 },
-      { label: "200ms - 500ms (Staggered Reasoning Loops)", nextScore: 200 },
-      { label: "Asynchronous background execution", nextScore: 50 }
+      { label: "Reliability and uptime", nextScore: 200 },
+      { label: "Fast execution latency", nextScore: 200 },
+      { label: "Strict security boundaries", nextScore: 200 }
     ]
   }
 ];
@@ -49,12 +48,12 @@ export default function DemoPage() {
   const [currentStep, setCurrentStep] = useState(0);
   const [scoreHistory, setScoreHistory] = useState<number[]>([]);
   const [botChatHistory, setBotChatHistory] = useState<string[]>([
-    "VerroAI System Counselor initializing... Verified SSL peering handshake online."
+    "Hi there! I can help you figure out what your VerroAI setup will look like."
   ]);
 
   const handleSubOption = (optionRate: number, optionLabel: string) => {
     setScoreHistory(prev => [...prev, optionRate]);
-    setBotChatHistory(prev => [...prev, `You selected: ${optionLabel}`]);
+    setBotChatHistory(prev => [...prev, `You: ${optionLabel}`]);
 
     if (currentStep < counselorQuestions.length - 1) {
       const nextQ = counselorQuestions[currentStep + 1];
@@ -65,14 +64,14 @@ export default function DemoPage() {
     } else {
       setTimeout(() => {
         const totalRatingFactor = scoreHistory.reduce((a, b) => a + b, 0) + optionRate;
-        const estCost = Math.round(1500 + totalRatingFactor * 3.5);
+        const estCost = Math.round(500 + totalRatingFactor * 1.5);
         
         setBotChatHistory(prev => [
           ...prev,
-          `System processing parameters complete [200 OK]. Based on cloud peering needs and workflow limits, we've compiled your customized pilot spec summary:`,
-          `> Est. Monthly Rate: $${estCost.toLocaleString()} / mo`,
-          `> ISO Safe Sandboxes: Full gVisor Processes Isolated`,
-          `Your parameters are successfully cached. Submit the scheduling form on the left to confirm your meeting with a Staff Architect.`
+          `Thanks for sharing. Based on your needs, here's a quick estimate:`,
+          `> Est. Starting Plan: $${estCost.toLocaleString()} / mo`,
+          `> Sandbox execution with SOC2 targets`,
+          `Please fill out the form on the left to schedule a full demo.`
         ]);
         setCurrentStep(99); // chat completed
       }, 500);
@@ -105,16 +104,16 @@ export default function DemoPage() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/15 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase mb-6"
           >
             <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
-            Lock In Peer Evaluation Demo
+            Lock In Demo
           </motion.div>
           
           <h1 className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6">
             Book an Executive <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Architecture Consultation.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Consultation.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Review integration scopes with our co-founders. Analyze performance requirements, customize SLA variables, and design secure sandbox architectures.
+            Review integration scopes with our team. Analyze performance requirements, customize SLA variables, and design secure sandbox architectures.
           </p>
         </div>
 
@@ -244,7 +243,7 @@ export default function DemoPage() {
               <div className="flex justify-between items-center mb-6">
                 <span className="text-[10px] uppercase font-bold text-brand-gold tracking-widest font-mono flex items-center gap-1">
                   <BrainCircuit className="w-4 h-4 text-brand-yellow animate-pulse" />
-                  VerroAI Pilot Chat counselor
+                  VerroAI Chat
                 </span>
                 <span className="text-[9px] font-mono font-bold bg-[#111111] px-2 py-0.5 rounded text-white/40 border border-white/5">SSL SECURE</span>
               </div>
@@ -252,7 +251,7 @@ export default function DemoPage() {
               {/* Bot chat bubble scroll area */}
               <div className="w-full bg-black/40 border border-white/5 rounded-xl p-4 h-[240px] overflow-y-auto space-y-3 font-mono text-[10px] sm:text-xs leading-relaxed select-none">
                 {botChatHistory.map((text, i) => {
-                  const isUser = text.startsWith("You selected:");
+                  const isUser = text.startsWith("You:");
                   const isSlaLine = text.startsWith(">");
                   return (
                     <div 

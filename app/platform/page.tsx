@@ -36,16 +36,16 @@ export default function PlatformPage() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/15 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase mb-6"
           >
             <Cpu className="w-3.5 h-3.5 text-brand-yellow" />
-            Venture-Grade Systems Engine
+            Platform Infrastructure
           </motion.div>
           
           <h1 className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6">
-            The Microarchitecture of <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Autonomous AI Compute.</span>
+            The infrastructure for <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">AI workflows.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            A secure multi-tenant cloud kernel that converts raw event queues into self-monitoring agent executions. Sub-millisecond pipeline routing with native audit ledgers.
+            A secure managed platform that converts external events and API requests into reliable AI workflows. We handle the orchestration and scaling.
           </p>
         </div>
 
@@ -55,20 +55,20 @@ export default function PlatformPage() {
             {
               icon: Network,
               layer: "Layer 01",
-              title: "Adaptive Ingress Mesh",
-              desc: "Acts as a light-speed ingress proxy mapping live REST endpoints, database logs, or system alerts cleanly into real-time payload definitions."
+              title: "Event Routing",
+              desc: "Connect your existing REST endpoints or internal webhooks to trigger AI workflows."
             },
             {
               icon: BrainCircuitIcon,
               layer: "Layer 02",
-              title: "Cognitive Routing Scheduler",
-              desc: "Intelligently balances workloads. Evaluates request complexity on-the-fly, delegating simpler tasks to hyper-efficient models and saving deeper reasoning queries for heavyweight nodes."
+              title: "Managed Execution",
+              desc: "Execute workflows efficiently. We handle task queueing, retries, and model routing to ensure reliable operations."
             },
             {
               icon: ShieldCheckIcon,
               layer: "Layer 03",
-              title: "Verification Guardrails",
-              desc: "Pre-inference context sanitization combined with strict post-inference safety nodes. Validates schema structures before committing code executions directly."
+              title: "Data Validation",
+              desc: "Ensure predictable outputs through strict schema validation and execution logging."
             }
           ].map((card, idx) => (
             <div 
@@ -91,20 +91,20 @@ export default function PlatformPage() {
             <div>
               <div className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-gold uppercase tracking-wider mb-3">
                 <Zap className="w-4 h-4 text-brand-yellow" />
-                Active Deployment Node Specs
+                Platform Architecture
               </div>
-              <h3 className="font-bold text-2xl text-white tracking-tight mb-4">Under-The-Hood Architecture Specifications</h3>
+              <h3 className="font-bold text-2xl text-white tracking-tight mb-4">Built for operational scale</h3>
               <p className="text-sm text-white/50 leading-relaxed font-medium mb-6">
-                VerroAI clusters rely on state-of-the-art edge execution pools paired with isolated VPC pipelines. Perfect for high-intensity fin-tech, high-scale logistics, and auto-repair services.
+                VerroAI provides secure, scalable execution environments for your AI workflows. Built to support growing teams and intensive operational processes.
               </p>
             </div>
 
             <div className="space-y-4 border-t border-white/10 pt-6">
               {[
                 { title: "Avg. Hot Agent Provision Time", value: "85ms" },
-                { title: "Context Mesh Propagation Delay", value: "<1.4ms" },
-                { title: "Schema Adherence Verification Rating", value: "99.997%" },
-                { title: "Container Sandbox Isolation Level", value: "gVisor Core" }
+                { title: "Average Request Latency", value: "<1.4ms" },
+                { title: "Schema Validation Success", value: "99.997%" },
+                { title: "Execution Environment", value: "Isolated Containers" }
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between items-center text-xs font-bold">
                   <span className="text-white/40">{spec.title}</span>
@@ -119,23 +119,23 @@ export default function PlatformPage() {
               <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
               <span className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
               <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-              <span className="text-xs font-mono font-bold text-white/40 ml-4">verro_orchestrator --target-compute</span>
+              <span className="text-xs font-mono font-bold text-white/40 ml-4">verro-cli deploy --workflow payment_failures</span>
             </div>
             
             <div className="p-6 font-mono text-xs text-white/80 leading-relaxed overflow-x-auto select-none bg-black flex-grow">
-              <span className="text-brand-yellow">// Initializing Verro Kernel v1.29.4-Production</span><br />
-              <span className="text-white/40">$ curl -X POST https://api.verro.ai/v1/pipelines \</span><br />
-              <span className="text-white/40">&nbsp;&nbsp;-H "Authorization: Bearer $VERRO_API_KEY" \</span><br />
-              <span className="text-white/40">&nbsp;&nbsp;-d '{"{"}</span><br />
-              <span className="text-brand-ivory">&nbsp;&nbsp;&nbsp;&nbsp;"pipeline_id": "route_payment_failures",</span><br />
-              <span className="text-brand-ivory">&nbsp;&nbsp;&nbsp;&nbsp;"trigger_event": "webhooks.stripe.charge.failed",</span><br />
-              <span className="text-brand-ivory">&nbsp;&nbsp;&nbsp;&nbsp;"agent_routing": "intelligent-heuristic",</span><br />
-              <span className="text-brand-ivory">&nbsp;&nbsp;&nbsp;&nbsp;"enforce_safety_rule": "strict_compliance",</span><br />
-              <span className="text-brand-ivory">&nbsp;&nbsp;&nbsp;&nbsp;"max_allowed_cost_per_iteration": 0.04</span><br />
-              <span className="text-white/40">&nbsp;&nbsp;{"}"}'</span><br /><br />
-              <span className="text-emerald-400">⚡ [202 OK] Pipeline provisioned successfully</span><br />
-              <span className="text-white/40">&gt;&gt; Hot Node IP: 10.128.0.40 (Virtual Cluster Peering Verified)</span><br />
-              <span className="text-white/40">&gt;&gt; Sandbox Boundary Verified (gVisor process isolated)</span>
+              <span className="text-brand-yellow">{"// Initializing Verro Kernel v1.29.4-Production"}</span><br />
+              <span className="text-white/40">{"$ curl -X POST https://api.verro.ai/v1/pipelines \\"}</span><br />
+              <span className="text-white/40">{"  -H \"Authorization: Bearer $VERRO_API_KEY\" \\"}</span><br />
+              <span className="text-white/40">{"  -d '{"}</span><br />
+              <span className="text-brand-ivory">{"    \"pipeline_id\": \"route_payment_failures\","}</span><br />
+              <span className="text-brand-ivory">{"    \"trigger_event\": \"webhooks.stripe.charge.failed\","}</span><br />
+              <span className="text-brand-ivory">{"    \"model\": \"gemini-3.5-flash\","}</span><br />
+              <span className="text-brand-ivory">{"    \"schema_validation\": true,"}</span><br />
+              <span className="text-brand-ivory">{"    \"max_allowed_cost_per_iteration\": 0.04"}</span><br />
+              <span className="text-white/40">{"  }'"}</span><br /><br />
+              <span className="text-emerald-400">{"⚡ [202 OK] Pipeline provisioned successfully"}</span><br />
+              <span className="text-white/40">{">> Workflow deployed to production"}</span><br />
+              <span className="text-white/40">{">> Environment secured"}</span>
             </div>
           </div>
         </div>
@@ -143,9 +143,9 @@ export default function PlatformPage() {
         {/* Interactive Specs Calculator Section */}
         <div className="border border-white/10 rounded-3xl bg-white/[0.02] p-6 sm:p-10 backdrop-blur-md overflow-hidden relative">
           <div className="mb-10 text-center lg:text-left max-w-2xl">
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-3">Model Live Cluster Hardware Needs</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display tracking-tight text-white mb-3">Workflow Performance Estimator</h2>
             <p className="text-sm sm:text-base text-white/50 leading-relaxed font-medium">
-              Adjust sliders and specs below to dynamically test system throughput, required memory limits, and SLA expectations.
+              Calculate expected throughput and latency based on your workflow volume and model requirements.
             </p>
           </div>
 

@@ -108,7 +108,7 @@ export function Navbar() {
                           <div className="text-[10px] text-white/40 font-medium">Audit queries and latency QPS.</div>
                         </div>
                       </Link>
-                      <Link href="/insights" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
+                      <Link href="/ai-insights" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
                         <Eye className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">Post-Inference Insights</div>
@@ -122,15 +122,54 @@ export function Navbar() {
             </div>
 
             {/* DIRECT LINKS */}
+            <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
             <Link href="/enterprise" className="hover:text-white transition-colors">Enterprise SLA</Link>
-            <Link href="/about" className="hover:text-white transition-colors">Company</Link>
+
+            {/* COMPANY DROPDOWN */}
+            <div className="relative">
+              <button 
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center gap-1.5 hover:text-white transition-all cursor-pointer py-1"
+              >
+                Company <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+              </button>
+              <AnimatePresence>
+                {activeDropdown === 'company' && (
+                  <>
+                    <div className="fixed inset-0 z-10" onClick={() => setActiveDropdown(null)} />
+                    <motion.div 
+                      initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 15, scale: 0.95 }}
+                      transition={{ duration: 0.25 }}
+                      className="absolute right-0 top-10 w-64 bg-black/95 border border-white/10 p-2 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl z-20"
+                    >
+                      <Link href="/about" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
+                        <Compass className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                        <div>
+                          <div className="text-xs font-bold text-white">About VerroAI</div>
+                          <div className="text-[10px] text-white/40 font-medium">Mission, story, and ecosystem.</div>
+                        </div>
+                      </Link>
+                      <Link href="/team" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
+                        <Users className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
+                        <div>
+                          <div className="text-xs font-bold text-white">Our Team</div>
+                          <div className="text-[10px] text-white/40 font-medium font-sans">Founding architects and advisers.</div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  </>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
           
           {/* Action buttons */}
           <div className="hidden md:flex items-center gap-5">
             <Link href="/demo" className="text-[14px] font-semibold text-white/75 hover:text-white transition-colors">Sign In</Link>
             <Link href="/demo" className="bg-white text-black text-[14px] font-bold px-5 py-2.5 rounded-full hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-all shadow-md">
-              Book Pilot Demo
+              Book a Demo
             </Link>
           </div>
 
@@ -159,21 +198,22 @@ export function Navbar() {
               <div className="text-[10px] font-black tracking-widest text-brand-gold uppercase mb-2">Systems Platform</div>
               <Link href="/platform" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Platform Overview</Link>
               <Link href="/workflows" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">AI Workflows</Link>
-              <Link href="/automations" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Automations blue</Link>
+              <Link href="/automations" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Automations</Link>
               
               <div className="text-[10px] font-black tracking-widest text-brand-gold uppercase mt-6 mb-2">Telemetry Intelligence</div>
-              <Link href="/analytics" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Inference Analytics</Link>
-              <Link href="/insights" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Trace Auditor Insights</Link>
+              <Link href="/analytics" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">System Analytics</Link>
+              <Link href="/ai-insights" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Trace Insights</Link>
               
               <div className="text-[10px] font-black tracking-widest text-brand-gold uppercase mt-6 mb-2">Scale & Structure</div>
               <Link href="/enterprise" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5">Enterprise SLA</Link>
               <Link href="/about" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5 font-display">About VerroAI</Link>
+              <Link href="/team" onClick={() => setIsOpen(false)} className="py-2.5 text-lg font-bold text-white hover:text-brand-yellow transition-all border-b border-white/5 font-display">Our Team</Link>
             </div>
             
             <div className="p-4 bg-white/[0.02] border-t border-white/10 flex flex-col gap-3 pb-8">
               <Link href="/demo" onClick={() => setIsOpen(false)} className="text-center font-bold text-white/50 hover:text-white py-3 text-sm">Sign In</Link>
               <Link href="/demo" onClick={() => setIsOpen(false)} className="w-full text-center bg-white text-black font-bold py-3.5 rounded-full shadow-[0_0_30px_rgba(255,255,255,0.2)] text-sm">
-                Book Executive Demo
+                Book a Demo
               </Link>
             </div>
           </motion.div>

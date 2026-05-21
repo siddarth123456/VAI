@@ -6,20 +6,20 @@ import { Database, Network, Cpu, Lock, Workflow, GitMerge } from 'lucide-react';
 
 const infraFeatures = [
   {
-    title: "Global Neural Edge",
-    desc: "Deploy intelligent nodes across 35 regions for sub-10ms latency operational inference.",
+    title: "Managed Infrastructure",
+    desc: "Deploy AI workflows without managing underlying compute or model endpoints.",
     icon: Network,
     delay: 0.1
   },
   {
-    title: "Vector-Native Compute",
-    desc: "Built-in distributed vector storage natively integrated with execution pipelines.",
+    title: "Database Integrations",
+    desc: "Securely connect to your existing data stores and APIs.",
     icon: Database,
     delay: 0.2
   },
   {
-    title: "Zero-Trust Execution",
-    desc: "Every workflow step runs in isolated secure enclaves ensuring absolute data privacy.",
+    title: "Secure Execution",
+    desc: "Workflows run in isolated environments with explicit permissions and audit logs.",
     icon: Lock,
     delay: 0.3
   }
@@ -40,7 +40,7 @@ export function Infrastructure() {
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-white/80 text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-6 shadow-[-4px_4px_15px_rgba(0,0,0,0.5)]"
             >
               <Cpu className="w-3 h-3 text-brand-yellow" />
-              Infrastructure
+              Platform Infrastructure
             </motion.div>
             
             <motion.h2 
@@ -50,8 +50,7 @@ export function Infrastructure() {
               transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-[40px] leading-[1.05] sm:text-5xl lg:text-[56px] font-extrabold font-display tracking-tight text-white mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]"
             >
-              Built for Scale. <br className="hidden sm:block" />
-              Engineered for AI.
+              Built for reliability and control.
             </motion.h2>
             
             <motion.p 
@@ -61,7 +60,7 @@ export function Infrastructure() {
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-base md:text-lg text-white/60 font-medium mb-10 md:mb-12 max-w-lg leading-relaxed"
             >
-              VerroAI operates on a multi-tenant, edge-accelerated cluster designed specifically to handle variable LLM inference loads and heavy autonomous actions without dropping a single event.
+              VerroAI provides a secure environment to run AI workflows. We focus on low latency, strict data passing, and clear monitoring so you can confidently deploy AI into your business processes.
             </motion.p>
             
             <div className="flex flex-col gap-6 md:gap-8 w-full max-w-lg">
@@ -98,10 +97,10 @@ export function Infrastructure() {
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.03)_0%,transparent_100%)]"></div>
               
               <div className="relative z-10">
-                <h3 className="font-bold text-white text-lg md:text-xl tracking-tight mb-2">Live Node Topography</h3>
+                <h3 className="font-bold text-white text-lg md:text-xl tracking-tight mb-2">System Architecture</h3>
                 <div className="flex items-center gap-2 text-[10px] md:text-xs font-bold text-white/50 uppercase tracking-widest">
                   <span className="w-2h h-2 rounded-full bg-emerald-500 animate-pulse inline-block mr-1 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span> 
-                  Routing Active
+                  System Healthy
                 </div>
               </div>
               
@@ -126,8 +125,8 @@ export function Infrastructure() {
               </div>
 
               <div className="relative z-10 flex border-t border-white/10 pt-4 md:pt-6 mt-4 justify-between items-center text-xs md:text-sm font-semibold text-white/50 bg-black/20 p-4 rounded-xl backdrop-blur-md">
-                 <div>Processed Bytes: <span className="text-white font-black font-mono">14.2 PB</span></div>
-                 <div><span className="text-brand-yellow font-black font-mono drop-shadow-[0_0_5px_rgba(231,200,90,0.5)]">3.4M</span> Req/s</div>
+                 <div>Tasks Processed: <span className="text-white font-black font-mono">1.2M+</span></div>
+                 <div><span className="text-brand-yellow font-black font-mono drop-shadow-[0_0_5px_rgba(231,200,90,0.5)]">99.9%</span> SLA</div>
               </div>
             </motion.div>
           </div>

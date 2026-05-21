@@ -5,12 +5,12 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 
 const reasons = [
-  "Zero-maintenance infrastructure",
-  "Deterministic AI outputs",
-  "Enterprise-grade security",
-  "SOC2 compliant by default",
-  "Millisecond execution latency",
-  "Infinite horizontal scaling"
+  "Managed infrastructure",
+  "Predictable workflow outputs",
+  "Secure execution environments",
+  "Clear audit logging",
+  "Centralized prompt management",
+  "Scalable integrations"
 ];
 
 export function WhyVerro() {
@@ -29,7 +29,7 @@ export function WhyVerro() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-[40px] leading-[1.05] md:text-5xl lg:text-[56px] font-extrabold font-display tracking-tight text-white mb-6 md:mb-8 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]"
           >
-            Why elite engineering teams choose VerroAI.
+            Why engineering teams choose VerroAI.
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
@@ -38,7 +38,7 @@ export function WhyVerro() {
             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-base sm:text-lg text-white/60 font-medium max-w-xl leading-relaxed mb-10 md:mb-12"
           >
-            We abstract away the complexity of LLM pipeline engineering. Stop building internal tooling and focus on delivering core product value while we handle the operational intelligence tier.
+            Stop building internal tooling just to manage language models. VerroAI provides the core infrastructure and necessary abstractions, so you can focus on building your product, not maintaining AI pipelines.
           </motion.p>
           
           <motion.div 
@@ -67,11 +67,11 @@ export function WhyVerro() {
             >
               <div className="w-full h-full rounded-[28px] md:rounded-[36px] bg-black border border-white/10 overflow-hidden relative shadow-2xl">
                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
-                 <div className="absolute top-8 left-6 md:top-10 md:left-10 text-white font-mono text-[11px] md:text-sm opacity-50">
-                    <div>{`>> System Initialization`}</div>
-                    <div className="mt-2">{`[OK] Edge cluster spun up`}</div>
-                    <div className="mt-2">{`[OK] Models loaded in memory`}</div>
-                    <div className="mt-2 text-brand-yellow font-bold">{`[READY] Operational Intelligence Active`}</div>
+                  <div className="absolute top-8 left-6 md:top-10 md:left-10 text-white font-mono text-[11px] md:text-sm opacity-50">
+                    <div>{`>> Deploying workflow`}</div>
+                    <div className="mt-2">{`[OK] Workflow engine ready`}</div>
+                    <div className="mt-2">{`[OK] Validation schemas loaded`}</div>
+                    <div className="mt-2 text-brand-yellow font-bold">{`[READY] Listening for events`}</div>
                  </div>
                  
                  <div className="absolute bottom-8 right-6 md:bottom-10 md:right-10 flex gap-2">
