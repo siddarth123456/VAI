@@ -9,8 +9,8 @@ import { Cpu, Zap, Database, ArrowRight, Play, Terminal, HelpCircle, HardDrive, 
 const mockRecipes = [
   {
     id: "rec_101",
-    title: "Server Infra Self-Healing Loop",
-    desc: "Reacts instantly to disk space or process limits. Automatically invokes localized cache evictions, system resets, and database vacuum scripts without manual ops.",
+    title: "Database Maintenance Job",
+    desc: "Reacts proactively to disk space or process limits. Automatically invokes localized cache evictions, system resets, and database vacuum scripts without manual ops.",
     category: "Infrastructure Management",
     frequency: "Active Real-Time",
     savings: "$1,840/mo saved"
@@ -25,8 +25,8 @@ const mockRecipes = [
   },
   {
     id: "rec_108",
-    title: "Autonomous Regulatory Compliance Auditing",
-    desc: "Periodically loops over ledger tables, verifies sandbox processes, sanitizes PII payloads, and aggregates cryptographic hashes direct into compliance volumes.",
+    title: "Automated Compliance Auditing",
+    desc: "Periodically scans database records to sanitize PII payloads, mask sensitive fields, and aggregate audit logs into compliance storage.",
     category: "Security & Auditing",
     frequency: "Trigger hourly",
     savings: "100% Compliant audit"
@@ -41,7 +41,7 @@ export default function AutomationsPage() {
   const simulatedBlueprintStart = (recipeId: string) => {
     if (runningRecipe) return;
     setRunningRecipe(recipeId);
-    setRunLogs(["[INIT] Spawning Verro sandbox isolation node...", "[OK] Isolated gVisor process boundary established."]);
+    setRunLogs(["[INIT] Spawning Verro sandbox isolation node...", "[OK] Secure execution boundary established."]);
 
     setTimeout(() => {
       setRunLogs(prev => [...prev, `[RECIPE] Initializing matching checklist properties for '${selectedRecipe.title}'`]);
@@ -52,7 +52,7 @@ export default function AutomationsPage() {
     }, 1200);
 
     setTimeout(() => {
-      setRunLogs(prev => [...prev, `[SUCCESS] Event resolved. Action completed in exactly 2.4s. Bypassed heavyweight reasoning.`]);
+      setRunLogs(prev => [...prev, `[SUCCESS] Event resolved. Action completed in exactly 2.4s. System state validated.`]);
       setRunningRecipe(null);
     }, 1900);
   };
@@ -78,12 +78,12 @@ export default function AutomationsPage() {
           </motion.div>
           
           <h1 className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6">
-            Autonomous Recipes. <br />
+            Ready-to-Use Blueprints. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Repeatable Precision.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Review deployment-ready task recipes. Launch isolated system monitors that automatically self-heal transactions, trace latencies, and protect databases.
+            Review deployment-ready task recipes. Launch isolated system monitors that automatically handle routine transactions, trace latencies, and protect databases.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export default function AutomationsPage() {
               </div>
               <h3 className="font-bold text-xl text-white tracking-tight mb-2">{selectedRecipe.title}</h3>
               <p className="text-xs text-white/45 leading-relaxed font-medium mb-6">
-                Click launch below to trace a live offline execution of this pipeline. Watch real terminal transactions simulated through our isolated gVisor subprocesses.
+                Click launch below to trace a simulated offline execution of this pipeline. Watch real terminal transactions simulated through secure execution environments.
               </p>
 
               {/* Terminal Screen inside Tester */}

@@ -57,7 +57,7 @@ export function DashboardShowcase() {
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-base md:text-lg text-white/60 font-medium"
             >
-              Real-time operational visibility into AI workflows, autonomous actions, and system health. Make executive decisions based on hard telemetry, not guesswork.
+              Real-time operational visibility into AI workflows, automated actions, and system health. Make executive decisions based on reliable data, not guesswork.
             </motion.p>
           </div>
           
@@ -124,8 +124,8 @@ export function DashboardShowcase() {
               <nav className="flex flex-col gap-1 px-4">
                 <SidebarItem icon={Activity} label="Overview" active />
                 <SidebarItem icon={Workflow} label="Pipelines" />
-                <SidebarItem icon={GitBranch} label="Routing Nodes" />
-                <SidebarItem icon={Cpu} label="Compute Cluster" />
+                <SidebarItem icon={GitBranch} label="Workflow Nodes" />
+                <SidebarItem icon={Cpu} label="Execution Queue" />
               </nav>
 
               <div className="mt-auto p-6">
@@ -180,7 +180,7 @@ export function DashboardShowcase() {
                     <HighlightCard 
                     label="Automations Fired" 
                     value="24.8M" 
-                    desc="Total autonomous workflow step executions." 
+                    desc="Total automated workflow step executions." 
                     icon={Sparkles} 
                     trend="+1.2M" 
                     />
@@ -193,7 +193,7 @@ export function DashboardShowcase() {
                   <div className="flex justify-between items-start md:items-center mb-6 md:mb-8">
                     <div>
                       <h3 className="font-bold text-white text-base md:text-lg drop-shadow-sm">System Load vs Accuracy</h3>
-                      <p className="text-white/50 text-xs md:text-sm">Model confidence scores under varied QPS loads.</p>
+                      <p className="text-white/50 text-xs md:text-sm">System performance under varying load.</p>
                     </div>
                     <button className="p-1.5 md:p-2 bg-white/5 rounded-md hover:bg-white/10 transition-colors flex-shrink-0 border border-white/10"><BarChart3 className="w-4 h-4 text-white/80" /></button>
                   </div>
@@ -268,17 +268,17 @@ export function DashboardShowcase() {
                       
                       <AnomalyItem 
                         icon={ShieldAlert}
-                        title="DDoS Vector Mitigated"
+                        title="Rate Limit Enforced"
                         time="12 mins ago"
-                        desc="Auto-scaled edge firewalls blocked abnormal API spike from 3 regions."
+                        desc="Rate limiting blocked abnormal API request volume from 3 IPs."
                         urgency="high"
                       />
                       
                       <AnomalyItem 
                         icon={ServerCrash}
-                        title="Database Failover"
+                        title="Server Rotation"
                         time="3 hrs ago"
-                        desc="Replica cluster took over seamlessly during planned region maintenance."
+                        desc="Replica took over seamlessly during planned maintenance."
                         urgency="med"
                         last
                       />

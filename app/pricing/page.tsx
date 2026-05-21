@@ -35,7 +35,7 @@ export default function PricingPage() {
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Choose a plan that fits your team's needs. Scale up infrastructure as your workflows grow.
+            Choose a plan that fits your team&apos;s needs. Scale up infrastructure as your workflows grow.
           </p>
         </div>
 

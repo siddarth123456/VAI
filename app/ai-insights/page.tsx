@@ -9,23 +9,23 @@ import { Eye, ShieldCheck, Database, Search, Terminal, AlertCircle, Cpu, Sliders
 const mockTraces = [
   {
     id: "trace_802",
-    action: "Infrastructure Self-Healing Loop",
+    action: "Automated Maintenance Job",
     status: "Completed",
     latency: "340ms",
     accuracy: "99.98%",
     trigger: "Postgres Storage Buffer Overload (93.1%)",
-    systemPrompt: "You are the resident system daemon. Analyze storage limits on disk partition #4 and invoke clean_temp_logs when threshold exceeds 90%. Assert gVisor sandbox compliance.",
-    contextRetrieved: "disk_used_percentage: 93.1%, environment: prod, isolated_vpc: peer-us-east"
+    systemPrompt: "Analyze storage limits on disk partition #4 and invoke clean_temp_logs when threshold exceeds 90%.",
+    contextRetrieved: "disk_used_percentage: 93.1%, environment: prod, region: us-east"
   },
   {
     id: "trace_795",
-    action: "Kafka Broker Hot Partition Recovery",
+    action: "Data Processing Queue Rebalance",
     status: "Completed",
     latency: "520ms",
     accuracy: "99.85%",
-    trigger: "Kafka Partition Queue Starvation (Topic: analytics_event)",
-    systemPrompt: "Evaluate network saturation triggers on Kakfa topic indices and balance broker loads across partitions 1-4. Validate safety hash values before re-allocating keys.",
-    contextRetrieved: "starved_replicas: [3, 4], latency_delta: +140ms, total_topics: 15"
+    trigger: "Message Queue Starvation (Topic: analytics_event)",
+    systemPrompt: "Evaluate queue backlog and rebalance worker instances. Validate payload hashes before migrating.",
+    contextRetrieved: "queued_messages: 4500, worker_utilization: 99%, active_workers: 4"
   },
   {
     id: "trace_740",
@@ -77,12 +77,12 @@ export default function AIInsightsPage() {
           </motion.div>
           
           <h1 className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6">
-            Real-Time AI-Insights <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">And Decisiveness Auditing.</span>
+            Real-Time Workflow <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Execution Traces.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Review detailed execution records. Verify prompting safety structures, input contextual dimensions, and check the performance profiles of our agent nodes.
+            Review detailed execution records. Verify model instructions, input data, and system performance.
           </p>
         </div>
 
@@ -136,11 +136,11 @@ export default function AIInsightsPage() {
             <div className="bg-white/5 px-6 py-4 border-b border-white/10 flex items-center justify-between text-xs font-mono select-none">
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-brand-yellow" />
-                <span className="text-white/70 font-bold">{selectedTrace.id} Cognitive Inspection Window</span>
+                <span className="text-white/70 font-bold">{selectedTrace.id} Execution Log</span>
               </div>
               <div className="flex gap-4 text-white/45 font-bold">
-                <span>Latency Check: <strong className="text-white">{selectedTrace.latency}</strong></span>
-                <span>Safety Rating: <strong className="text-emerald-400">{selectedTrace.accuracy}</strong></span>
+                <span>Latency: <strong className="text-white">{selectedTrace.latency}</strong></span>
+                <span>Config Match: <strong className="text-emerald-400">{selectedTrace.accuracy}</strong></span>
               </div>
             </div>
 
@@ -157,7 +157,7 @@ export default function AIInsightsPage() {
 
               {/* Field 2: Prompt Instruction */}
               <div>
-                <span className="text-[10px] font-mono uppercase font-black text-white/40 tracking-widest block mb-2">Cognitive System Instructs</span>
+                <span className="text-[10px] font-mono uppercase font-black text-white/40 tracking-widest block mb-2">System Instructions</span>
                 <div className="bg-black/60 border border-white/5 p-4 rounded-xl text-xs font-mono text-white/80 leading-relaxed">
                   {selectedTrace.systemPrompt}
                 </div>
@@ -165,7 +165,7 @@ export default function AIInsightsPage() {
 
               {/* Field 3: Context Retrieved */}
               <div>
-                <span className="text-[10px] font-mono uppercase font-black text-white/40 tracking-widest block mb-2">Ingestion variables mesh</span>
+                <span className="text-[10px] font-mono uppercase font-black text-white/40 tracking-widest block mb-2">Context Variables</span>
                 <div className="bg-black/60 border border-white/5 p-4 rounded-xl text-xs font-mono text-brand-ivory leading-relaxed">
                   {selectedTrace.contextRetrieved}
                 </div>
@@ -175,12 +175,12 @@ export default function AIInsightsPage() {
 
             {/* Bottom Panel Actions */}
             <div className="p-4 bg-white/5 border-t border-white/10 flex justify-between items-center text-xs font-bold text-white/50">
-              <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-400" /> gVisorProcess Isolation Verified</span>
+              <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-emerald-400" /> Environment Secured</span>
               <button 
                 onClick={() => triggerExportLogs(selectedTrace.id)}
                 className={`px-4 py-2 rounded-lg font-bold transition-all ${exportComplete ? 'bg-emerald-500 text-black shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-white text-black hover:bg-white/90'}`}
               >
-                {exportComplete ? "✓ Logs Copied to Clipboard (Checksum Secured)" : "Export Trace Logs"}
+                {exportComplete ? "✓ Logs Copied" : "Export Trace Logs"}
               </button>
             </div>
 

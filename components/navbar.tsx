@@ -59,21 +59,21 @@ export function Navbar() {
                         <Compass className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">Platform Overview</div>
-                          <div className="text-[10px] text-white/40 font-medium">Core neural computing kernel.</div>
+                          <div className="text-[10px] text-white/40 font-medium">Core infrastructure overview.</div>
                         </div>
                       </Link>
                       <Link href="/workflows" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
                         <Workflow className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">AI Workflows</div>
-                          <div className="text-[10px] text-white/40 font-medium">Map pipeline event monitors.</div>
+                          <div className="text-[10px] text-white/40 font-medium">Map your workflow execution.</div>
                         </div>
                       </Link>
                       <Link href="/automations" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
                         <Layers className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">Automations</div>
-                          <div className="text-[10px] text-white/40 font-medium">Autonomous trigger blueprints.</div>
+                          <div className="text-[10px] text-white/40 font-medium">Workflow trigger blueprints.</div>
                         </div>
                       </Link>
                     </motion.div>
@@ -105,14 +105,14 @@ export function Navbar() {
                         <Activity className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
                           <div className="text-xs font-bold text-white">Telemetry & Analytics</div>
-                          <div className="text-[10px] text-white/40 font-medium">Audit queries and latency QPS.</div>
+                          <div className="text-[10px] text-white/40 font-medium">Monitor execution metrics.</div>
                         </div>
                       </Link>
                       <Link href="/ai-insights" onClick={() => setActiveDropdown(null)} className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all text-left">
                         <Eye className="w-4 h-4 text-brand-yellow shrink-0 mt-0.5" />
                         <div>
-                          <div className="text-xs font-bold text-white">Post-Inference Insights</div>
-                          <div className="text-[10px] text-white/40 font-medium">Trace prompts and system variables.</div>
+                          <div className="text-xs font-bold text-white">Execution Insights</div>
+                          <div className="text-[10px] text-white/40 font-medium">Trace logs and execution context.</div>
                         </div>
                       </Link>
                     </motion.div>

@@ -11,7 +11,7 @@ export function Footer() {
             <span className="text-brand-yellow">✦</span> VerroAI
           </div>
           <p className="text-sm md:text-[15px] text-white/50 mb-6 md:mb-8 leading-relaxed font-semibold">
-            The next-generation operating system for building, scaling, and managing autonomous AI infrastructure.
+            The operational infrastructure for building, scaling, and managing reliable AI workflows.
           </p>
         </div>
 

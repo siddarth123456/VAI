@@ -17,13 +17,13 @@ export default function WorkflowsPage() {
   const getJSONBlueprint = () => {
     return JSON.stringify({
       version: "1.3",
-      pipeline_id: `autonomous_trigger_${selectedTrigger}`,
+      pipeline_id: `workflow_${selectedTrigger}`,
       orchestration: {
         event: `webhooks.${selectedTrigger}`,
         routing: {
-          strategy: selectedModel === "flash-decide" ? "high-speed-heuristic" : "deep-multi-agent-chain",
+          strategy: selectedModel === "flash-decide" ? "fast-execution" : "complex-reasoning",
           threshold: 0.85,
-          fallback_action: "sys_manual_escalate"
+          fallback_action: "human_review"
         },
         guardrails: {
           sanitize_pii: true,
@@ -38,22 +38,22 @@ export default function WorkflowsPage() {
   const triggerLiveSimRun = () => {
     if (isRunningSim) return;
     setIsRunningSim(true);
-    setSimOutput(["[INFO] Handshaking with Ingress cluster on port 3000...", "[OK] Sandbox verified (Process ID: sandbox_982)"]);
+    setSimOutput(["[INFO] Initializing workflow engine...", "[OK] Environment secured."]);
 
     setTimeout(() => {
-      setSimOutput(prev => [...prev, `[TRIGGER] Registered hook matching key '${selectedTrigger}'`]);
+      setSimOutput(prev => [...prev, `[EVENT] Received webhook event: '${selectedTrigger}'`]);
     }, 600);
 
     setTimeout(() => {
-      setSimOutput(prev => [...prev, `[COGNITION] Routed to Gemini ${selectedModel === 'flash-decide' ? '3.5 Flash' : '3.5 Pro'} in 45ms`]);
+      setSimOutput(prev => [...prev, `[EXECUTION] Routed to Gemini ${selectedModel === 'flash-decide' ? '3.5 Flash' : '3.5 Pro'} in 45ms`]);
     }, 1200);
 
     setTimeout(() => {
-      setSimOutput(prev => [...prev, safetyEnforced ? `[GUARD] Safety validation passed. Checked Schema Compliance.` : `[WARN] Schema bypass enabled. Evaluating direct JSON payload.`]);
+      setSimOutput(prev => [...prev, safetyEnforced ? `[VALIDATION] Schema validation passed. Payload verified.` : `[WARN] Schema validation skipped. Evaluating raw payload.`]);
     }, 1800);
 
     setTimeout(() => {
-      setSimOutput(prev => [...prev, `[SUCCESS] Output generated and action committed to live database.`]);
+      setSimOutput(prev => [...prev, `[SUCCESS] Output generated and action completed successfully.`]);
       setIsRunningSim(false);
     }, 2400);
   };
@@ -80,11 +80,11 @@ export default function WorkflowsPage() {
           
           <h1 className="text-[40px] leading-[1.05] sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight text-white mb-6">
             Intelligent Event. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Determined Action.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory to-brand-yellow">Predictable Action.</span>
           </h1>
           
           <p className="text-base sm:text-lg text-white/50 font-medium leading-relaxed max-w-2xl mx-auto">
-            Build high-fidelity agentic loops that monitor operational triggers, evaluate next best steps automatically, and initiate corrective transactional payloads.
+            Build reliable workflows that monitor operational webhooks, evaluate the context, and execute the correct transactional response automatically.
           </p>
         </div>
 
@@ -123,11 +123,11 @@ export default function WorkflowsPage() {
 
               {/* Step 2: Choose Brain Layer */}
               <div className="space-y-3 mb-6">
-                <span className="text-xs font-bold text-white/40 uppercase tracking-widest block font-mono">02. Cognitive Logic Layer</span>
+                <span className="text-xs font-bold text-white/40 uppercase tracking-widest block font-mono">02. Execution Model</span>
                 <div className="grid grid-cols-2 gap-2">
                   {[
-                    { id: "flash-decide", label: "Decision Engine (Flash)", desc: "Lowest latency. Instant router" },
-                    { id: "pro-reason", label: "Reasoning Loop (Pro)", desc: "Staggered chain, high safety" }
+                    { id: "flash-decide", label: "Gemini Flash", desc: "Low latency. Ideal for routing." },
+                    { id: "pro-reason", label: "Gemini Pro", desc: "Complex reasoning tasks." }
                   ].map((model) => (
                     <button
                       key={model.id}
@@ -143,7 +143,7 @@ export default function WorkflowsPage() {
 
               {/* Step 3: Hard Safety Guardrails */}
               <div className="space-y-3">
-                <span className="text-xs font-bold text-white/40 uppercase tracking-widest block font-mono">03. Extra Verification Rule</span>
+                <span className="text-xs font-bold text-white/40 uppercase tracking-widest block font-mono">03. Validation Rules</span>
                 <label className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/5 cursor-pointer selection:bg-transparent">
                   <input
                     type="checkbox"
@@ -152,8 +152,8 @@ export default function WorkflowsPage() {
                     className="accent-brand-yellow w-4 h-4 rounded"
                   />
                   <div>
-                    <div className="text-xs font-bold text-white">Strict Sandbox Checking</div>
-                    <div className="text-[10px] text-white/45">Validates payload JSON and sandbox variables.</div>
+                    <div className="text-xs font-bold text-white">Strict Schema Validation</div>
+                    <div className="text-[10px] text-white/45">Ensure payload matches exact schema before execution.</div>
                   </div>
                 </label>
               </div>
@@ -200,12 +200,12 @@ export default function WorkflowsPage() {
               <div className="bg-white/5 px-5 py-3 border-b border-white/10 flex items-center justify-between text-xs font-mono">
                 <div className="flex items-center gap-2 text-white/50 font-bold">
                   <Zap className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Sandbox Terminal Log Output</span>
+                  <span>Workflow Execution Log</span>
                 </div>
                 {isRunningSim && (
                   <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-bold">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                    <span>Live Trace</span>
+                    <span>Executing</span>
                   </div>
                 )}
               </div>
@@ -214,13 +214,13 @@ export default function WorkflowsPage() {
                 {simOutput.length === 0 ? (
                   <div className="flex items-center gap-2 text-white/30 py-8 justify-center flex-col text-center">
                     <AlertCircle className="w-8 h-8 text-white/15" />
-                    <span>Select configurations on the left and click **Test Live Execution Sim** to trace real-time execution flows.</span>
+                    <span>Select configurations on the left and click **Test Live Execution Sim** to trace execution flows.</span>
                   </div>
                 ) : (
                   simOutput.map((log, index) => {
                     let color = "text-white/60";
-                    if (log.startsWith("[TRIGGER]")) color = "text-brand-yellow font-bold";
-                    if (log.startsWith("[COGNITION]")) color = "text-brand-ivory";
+                    if (log.startsWith("[EVENT]")) color = "text-brand-yellow font-bold";
+                    if (log.startsWith("[EXECUTION]")) color = "text-brand-ivory";
                     if (log.startsWith("[SUCCESS]")) color = "text-emerald-400 font-bold";
                     if (log.startsWith("[WARN]")) color = "text-red-400 font-bold animate-pulse";
                     
