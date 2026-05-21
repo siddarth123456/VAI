@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
@@ -26,13 +27,13 @@ export function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full px-4 sm:px-0">
-          <button className="flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-4 md:px-10 md:py-5 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-lg group">
+          <Link href="/demo" className="flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-4 md:px-10 md:py-5 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-lg group">
             Start Building
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          <button className="flex items-center justify-center gap-2 bg-white/5 border-[1.5px] border-white/10 text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold w-full sm:w-auto hover:bg-white/10 hover:border-white/20 transition-all text-[15px] sm:text-lg shadow-sm backdrop-blur-md">
+          </Link>
+          <Link href="/demo" className="flex items-center justify-center gap-2 bg-white/5 border-[1.5px] border-white/10 text-white px-8 py-4 md:px-10 md:py-5 rounded-full font-bold w-full sm:w-auto hover:bg-white/10 hover:border-white/20 transition-all text-[15px] sm:text-lg shadow-sm backdrop-blur-md">
             Talk to Sales
-          </button>
+          </Link>
         </div>
       </motion.div>
     </section>

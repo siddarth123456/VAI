@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowRight, Terminal } from 'lucide-react';
 
@@ -57,15 +58,15 @@ export function Hero() {
         </motion.p>
         
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0 mt-4">
-          <button className="group flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-3.5 sm:py-4 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base">
+          <Link href="/demo" className="group flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-3.5 sm:py-4 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base">
             Book an Executive Demo
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </Link>
           
-          <button className="flex items-center justify-center gap-2 glass-button px-8 py-3.5 sm:py-4 rounded-full font-semibold w-full sm:w-auto hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base text-white">
+          <Link href="/platform" className="flex items-center justify-center gap-2 glass-button px-8 py-3.5 sm:py-4 rounded-full font-semibold w-full sm:w-auto hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base text-white">
             <Terminal className="w-4 h-4 text-white/50" />
             Explore Architecture
-          </button>
+          </Link>
         </motion.div>
         
       </motion.div>
