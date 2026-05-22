@@ -65,7 +65,7 @@ export function DashboardPreview() {
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-8 gap-4">
             <div>
               <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1">Workflow Overview</h2>
-              <p className="text-white/50 text-xs md:text-sm">Workflow execution metrics for the current cycle.</p>
+              <p className="text-white/50 font-mono text-xs md:text-sm">Workflow execution metrics for the current cycle.</p>
             </div>
             <div className="flex flex-wrap gap-2 md:gap-3">
               <div className="bg-white/5 border border-white/10 shadow-[0_2px_10px_rgba(0,0,0,0.2)] rounded-lg px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-white/80 flex items-center gap-2">
@@ -102,7 +102,7 @@ export function DashboardPreview() {
                 <div className="relative z-10 flex justify-between items-start mb-6 md:mb-8">
                   <div>
                     <h3 className="font-bold text-white text-base md:text-lg mb-0.5 md:mb-1">Task throughput</h3>
-                    <p className="text-white/50 text-xs md:text-sm">Real-time workflows executing across the platform</p>
+                    <p className="text-white/50 font-mono text-xs md:text-sm">Real-time workflows executing across the platform</p>
                   </div>
                   <button className="text-white/40 hover:text-white p-1.5 md:p-2 rounded-md hover:bg-white/5 transition-colors"><BarChart3 className="w-4 h-4 md:w-5 md:h-5" /></button>
                 </div>
@@ -237,7 +237,7 @@ function InsightRow({ title, desc, icon: Icon, isWarning = false }: { title: str
       </div>
       <div className="flex-grow">
         <h4 className="text-xs md:text-sm font-bold text-white/90 mb-0.5 transition-colors group-hover:text-white">{title}</h4>
-        <p className="text-[10px] md:text-xs text-white/50 leading-tight transition-colors group-hover:text-white/70">{desc}</p>
+        <p className="text-[10px] md:text-xs font-mono text-white/50 leading-tight transition-colors group-hover:text-white/70">{desc}</p>
       </div>
     </div>
   );

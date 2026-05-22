@@ -22,7 +22,7 @@ export function CTA() {
           Ready to build reliable <br className="hidden sm:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/80 to-brand-gold drop-shadow-[0_0_30px_rgba(231,200,90,0.3)]">AI workflows?</span>
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-white/50 font-medium mb-10 md:mb-12 max-w-2xl mx-auto px-4">
+        <p className="text-base sm:text-lg lg:text-xl text-white/50 font-mono mb-10 md:mb-12 max-w-2xl mx-auto px-4">
           Join early-stage and growing teams using VerroAI to build reliable AI-powered business operations. 
         </p>
 

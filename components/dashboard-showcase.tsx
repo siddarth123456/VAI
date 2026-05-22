@@ -55,7 +55,7 @@ export function DashboardShowcase() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-base md:text-lg text-white/60 font-medium"
+              className="text-base md:text-lg text-white/60 font-mono"
             >
               Real-time operational visibility into AI workflows, automated actions, and system health. Make executive decisions based on reliable data, not guesswork.
             </motion.p>
@@ -148,7 +148,7 @@ export function DashboardShowcase() {
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                   <h1 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-1 md:mb-2 drop-shadow-sm">Platform Operations</h1>
-                  <p className="text-white/60 text-xs md:text-sm font-medium">Monitoring 2.4M automated events over the last 24 hours.</p>
+                  <p className="text-white/60 font-mono text-xs md:text-sm">Monitoring 2.4M automated events over the last 24 hours.</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <select className="bg-white/10 border border-white/20 rounded-lg px-2 py-1.5 md:px-3 text-xs md:text-sm font-medium text-white focus:outline-none cursor-pointer shadow-sm backdrop-blur-md">
@@ -193,7 +193,7 @@ export function DashboardShowcase() {
                   <div className="flex justify-between items-start md:items-center mb-6 md:mb-8">
                     <div>
                       <h3 className="font-bold text-white text-base md:text-lg drop-shadow-sm">System Load vs Accuracy</h3>
-                      <p className="text-white/50 text-xs md:text-sm">System performance under varying load.</p>
+                      <p className="text-white/50 font-mono text-xs md:text-sm">System performance under varying load.</p>
                     </div>
                     <button className="p-1.5 md:p-2 bg-white/5 rounded-md hover:bg-white/10 transition-colors flex-shrink-0 border border-white/10"><BarChart3 className="w-4 h-4 text-white/80" /></button>
                   </div>
@@ -253,7 +253,7 @@ export function DashboardShowcase() {
                       </div>
                       <div className="pb-1 md:pb-2">
                         <div className="text-[10px] md:text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 px-1.5 md:px-2 py-0.5 md:py-1 rounded-md mb-1">+0.4%</div>
-                        <div className="text-[10px] md:text-xs font-medium text-white/50">Uptime Healthy</div>
+                        <div className="text-[10px] md:text-xs font-mono text-white/50">Uptime Healthy</div>
                       </div>
                     </div>
                   </div>
@@ -318,7 +318,7 @@ function HighlightCard({ label, value, desc, icon: Icon, trend, goodTrend }: { l
       </div>
       <div className="text-2xl md:text-[32px] font-black font-display tracking-tight text-white mb-1 md:mb-2 drop-shadow-sm">{value}</div>
       <div className="text-xs md:text-sm font-bold text-white mb-1">{label}</div>
-      <p className="text-[10px] md:text-xs font-medium text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">{desc}</p>
+      <p className="text-[10px] md:text-xs font-mono text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">{desc}</p>
     </div>
   );
 }
@@ -335,7 +335,7 @@ function AnomalyItem({ icon: Icon, title, time, desc, urgency, last }: { icon: a
           <h4 className="text-[11px] md:text-sm font-bold text-white truncate drop-shadow-sm">{title}</h4>
           <span className="text-[8px] md:text-[10px] font-bold text-white/40 uppercase tracking-wide flex-shrink-0">{time}</span>
         </div>
-        <p className="text-[10px] md:text-xs text-white/50 leading-relaxed font-medium">{desc}</p>
+        <p className="text-[10px] md:text-xs font-mono text-white/50 leading-relaxed font-medium">{desc}</p>
       </div>
     </div>
   );

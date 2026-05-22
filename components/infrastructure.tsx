@@ -58,7 +58,7 @@ export function Infrastructure() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-base md:text-lg text-white/60 font-medium mb-10 md:mb-12 max-w-lg leading-relaxed"
+              className="text-base md:text-lg text-white/60 font-mono mb-10 md:mb-12 max-w-lg leading-relaxed"
             >
               VerroAI provides a secure environment to run AI workflows. We focus on low latency, strict data passing, and clear monitoring so you can confidently deploy AI into your business processes.
             </motion.p>
@@ -78,7 +78,7 @@ export function Infrastructure() {
                   </div>
                   <div>
                     <h4 className="text-[15px] md:text-base font-bold text-white mb-1 group-hover:text-brand-yellow transition-colors drop-shadow-sm">{item.title}</h4>
-                    <p className="text-[13px] md:text-sm font-medium text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">{item.desc}</p>
+                    <p className="text-[13px] md:text-sm font-mono text-white/50 leading-relaxed group-hover:text-white/70 transition-colors">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}

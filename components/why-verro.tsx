@@ -36,7 +36,7 @@ export function WhyVerro() {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-base sm:text-lg text-white/60 font-medium max-w-xl leading-relaxed mb-10 md:mb-12"
+            className="text-base sm:text-lg text-white/60 font-mono max-w-xl leading-relaxed mb-10 md:mb-12"
           >
             Stop building internal tooling just to manage language models. VerroAI provides the core infrastructure and necessary abstractions, so you can focus on building your product, not maintaining AI pipelines.
           </motion.p>

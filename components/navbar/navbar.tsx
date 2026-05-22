@@ -46,7 +46,7 @@ export function Navbar() {
           </Link>
           
           {/* Desktop Nav links */}
-          <div className="hidden md:flex items-center gap-8 text-[13px] font-semibold">
+          <div className="hidden md:flex items-center gap-8 text-[15px] font-semibold">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`);
               return (

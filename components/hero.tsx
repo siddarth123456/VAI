@@ -43,7 +43,7 @@ export function Hero() {
         
         <motion.h1 
           variants={itemVariants} 
-          className="text-[40px] leading-[1.05] sm:text-6xl lg:text-7xl xl:text-[80px] font-extrabold tracking-[-0.04em] text-white font-display mb-6 md:mb-8 drop-shadow-2xl max-w-[1000px] mx-auto px-2"
+          className="text-[43px] leading-[1.05] sm:text-[63px] lg:text-[75px] xl:text-[83px] font-extrabold tracking-[-0.04em] text-white font-display mb-6 md:mb-8 drop-shadow-2xl max-w-[1000px] mx-auto px-2"
         >
           AI infrastructure for <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-ivory via-brand-yellow to-brand-amber">business operations.</span>
@@ -51,7 +51,7 @@ export function Hero() {
         
         <motion.p 
           variants={itemVariants} 
-          className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl mb-10 md:mb-12 leading-relaxed font-medium px-4"
+          className="text-sm sm:text-base lg:text-lg text-text-secondary max-w-2xl mb-10 md:mb-12 leading-relaxed font-mono px-4"
         >
           VerroAI provides the infrastructure for startups and growing teams to build reliable AI workflows. Connect language models to your daily operations with predictable, secure execution.
         </motion.p>

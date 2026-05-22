@@ -94,7 +94,7 @@ export function Features() {
                <span className="text-[10px] md:text-xs font-bold text-brand-yellow tracking-[0.1em] uppercase">Architecture</span>
             </div>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold font-display text-white mb-4 md:mb-6 tracking-tight drop-shadow-sm">Code-First Workflows</h3>
-            <p className="text-sm md:text-base lg:text-lg text-white/60 font-medium leading-relaxed">VerroAI helps engineering teams connect AI to their business logic. Use our platform to manage prompts, handle model latency, and ensure the data coming back is ready for production.</p>
+            <p className="text-sm md:text-base lg:text-lg text-white/60 font-mono leading-relaxed">VerroAI helps engineering teams connect AI to their business logic. Use our platform to manage prompts, handle model latency, and ensure the data coming back is ready for production.</p>
           </div>
           
           <div className="w-full xl:w-auto flex flex-col gap-3 md:gap-4 min-w-full sm:min-w-[320px] z-10 relative">

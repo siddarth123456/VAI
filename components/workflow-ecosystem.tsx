@@ -42,7 +42,7 @@ export function WorkflowEcosystem() {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.15, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-base md:text-lg text-white/50 font-medium"
+            className="text-base md:text-lg text-white/50 font-mono"
           >
             Go from incoming data to automated action. No complex setup, just straightforward, reliable automated workflows.
           </motion.p>
@@ -71,7 +71,7 @@ export function WorkflowEcosystem() {
                  )}
               </div>
               <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 drop-shadow-sm">{step.title}</h3>
-              <p className="text-white/50 font-medium text-sm md:text-sm max-w-[250px] leading-relaxed group-hover:text-white/70 transition-colors">{step.desc}</p>
+              <p className="text-white/50 font-mono text-sm md:text-sm max-w-[250px] leading-relaxed group-hover:text-white/70 transition-colors">{step.desc}</p>
             </motion.div>
           ))}
         </div>
