@@ -18,8 +18,8 @@ export function NavLink({ href, name, isActive, onClick, isMobile = false }: Nav
       <Link 
         href={href} 
         onClick={onClick} 
-        className={`flex items-center justify-between px-4 py-3.5 text-sm font-mono tracking-tight font-semibold transition-all rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-white/20 ${
-          isActive ? 'bg-white/10 text-white' : 'text-white/60 hover:text-white hover:bg-white/5'
+        className={`flex items-center justify-between px-4 py-3.5 text-sm font-mono tracking-tight font-semibold transition-all rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-black/20 ${
+          isActive ? 'bg-black/5 text-black font-bold' : 'text-black/60 hover:text-black hover:bg-black/5'
         }`}
       >
         {name}
