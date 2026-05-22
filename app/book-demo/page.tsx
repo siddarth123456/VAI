@@ -237,8 +237,8 @@ export default function BookDemoPage() {
             </div>
 
             <div className="border-t border-white/5 pt-6 mt-12 flex justify-between items-center text-[10px] font-mono font-bold text-white/30 uppercase tracking-widest">
-              <span>Peered Accelerator Partner</span>
-              <span className="text-white/60">Google Cloud Platform</span>
+              <span>Powered by</span>
+              <span className="text-white/60">Google</span>
             </div>
           </div>
 

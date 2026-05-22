@@ -38,7 +38,7 @@ export function Hero() {
       >
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 glass-panel rounded-full mb-6 max-w-full">
           <span className="w-2 h-2 rounded-full bg-primary-yellow animate-pulse flex-shrink-0 shadow-[0_0_12px_rgba(231,200,90,0.8)]" />
-          <span className="text-[10px] sm:text-xs font-bold text-white/80 tracking-[0.2em] uppercase truncate">Operational Intelligence</span>
+          <span className="font-mono text-[10px] sm:text-xs font-bold text-white/80 tracking-[0.2em] uppercase truncate">Operational Intelligence</span>
         </motion.div>
         
         <motion.h1 
@@ -57,12 +57,12 @@ export function Hero() {
         </motion.p>
         
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0 mt-4">
-          <Link href="/book-demo" className="group flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-3.5 sm:py-4 rounded-full font-bold w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base">
+          <Link href="/book-demo" className="font-mono font-bold group flex items-center justify-center gap-2 bg-white text-black shadow-[0_0_40px_rgba(255,255,255,0.2)] px-8 py-3.5 sm:py-4 rounded-full w-full sm:w-auto hover:bg-white/90 hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base">
             Book a Demo
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
           
-          <Link href="/platform" className="flex items-center justify-center gap-2 glass-button px-8 py-3.5 sm:py-4 rounded-full font-semibold w-full sm:w-auto hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base text-white">
+          <Link href="/platform" className="font-mono font-bold flex items-center justify-center gap-2 glass-button px-8 py-3.5 sm:py-4 rounded-full w-full sm:w-auto hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95 text-[15px] sm:text-base text-white">
             <Terminal className="w-4 h-4 text-white/50" />
             Explore Platform
           </Link>

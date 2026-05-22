@@ -37,11 +37,11 @@ export function OperatingPrinciples() {
         <div className="mb-16 md:mb-24 md:flex md:items-end justify-between">
           <div className="max-w-2xl">
             <span className="text-brand-gold uppercase tracking-widest font-bold text-[11px] mb-4 block font-mono">Our DNA</span>
-            <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-6 leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-display font-medium text-white mb-12 leading-tight tracking-tight">
               Engineering <br className="hidden sm:block" /> first principles.
             </h2>
           </div>
-          <p className="text-sm md:text-base text-white/50 font-mono leading-relaxed max-w-sm mt-6 md:mt-0">
+          <p className="text-[15px] md:text-[17px] text-white/50 font-mono leading-[1.8] max-w-sm mt-6 md:mt-0">
             The core tenets driving our platform-centric architecture and product philosophy. We build what we would want to operate.
           </p>
         </div>
@@ -54,7 +54,7 @@ export function OperatingPrinciples() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -translate-y-1/2 translate-x-1/3" />
               
-              <div className="flex justify-between items-start mb-8 relative z-10">
+              <div className="flex justify-between items-start mb-12 relative z-10">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 transition-colors duration-500">
                   <principle.icon className="w-5 h-5" />
                 </div>
@@ -63,7 +63,7 @@ export function OperatingPrinciples() {
               
               <div className="relative z-10">
                 <h3 className="text-xl font-medium font-display text-white mb-3 tracking-tight">{principle.title}</h3>
-                <p className="text-[14px] leading-relaxed text-white/50 font-medium">
+                <p className="text-[14px] leading-[1.8] text-white/50 font-medium">
                   {principle.desc}
                 </p>
               </div>

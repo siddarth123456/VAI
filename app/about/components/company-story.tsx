@@ -20,14 +20,14 @@ export function CompanyStory() {
               transition={{ duration: 0.8 }}
             >
               <span className="text-brand-gold uppercase tracking-widest font-bold text-[11px] mb-4 block font-mono">The Genesis</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-white mb-6 leading-[1.1] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-white mb-12 leading-[1.15] tracking-tight">
                 Born from <br /> operational friction.
               </h2>
-              <div className="w-12 h-1 bg-brand-yellow/100 rounded-full mb-8" />
+              <div className="w-12 h-1 bg-brand-yellow/100 rounded-full mb-12" />
               
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative mt-12 hidden lg:block">
                 <Quote className="w-6 h-6 text-white/30 absolute top-4 left-4" />
-                <p className="text-white/60 font-medium italic relative z-10 pt-4 pl-4 text-[15px] leading-relaxed">
+                <p className="text-white/60 font-medium italic relative z-10 pt-4 pl-4 text-[15px] leading-[1.8]">
                   &quot;Startups were treating AI as a feature, but building it like a science project. We needed to bring engineering discipline and operational rigors to language models.&quot;
                 </p>
                 <div className="mt-6 pl-4 flex items-center gap-3">
@@ -49,7 +49,7 @@ export function CompanyStory() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8 text-[14px] sm:text-[15px] text-white/60 font-mono leading-relaxed relative"
+              className="space-y-10 text-[15px] sm:text-base text-white/60 font-mono leading-[1.8] relative"
             >
               <p>
                 <strong className="text-white font-sans text-base sm:text-lg font-bold block mb-1">The Prototype Illusion.</strong> 
@@ -63,11 +63,11 @@ export function CompanyStory() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-6 border-y border-white/10 my-8">
                 <div className="border-l-2 border-white/10 pl-4">
                   <h4 className="text-white font-sans font-bold mb-1">Brittle Abstractions</h4>
-                  <p className="text-xs leading-relaxed">Relying on generic wrappers that hide the ground-truth token metrics and execution behaviors.</p>
+                  <p className="text-xs leading-[1.8]">Relying on generic wrappers that hide the ground-truth token metrics and execution behaviors.</p>
                 </div>
                 <div className="border-l-2 border-amber-400 pl-4">
                   <h4 className="text-white font-sans font-bold mb-1">The Visibility Gap</h4>
-                  <p className="text-xs leading-relaxed">Deploying models into production without structural logging, tracing, or latency monitoring.</p>
+                  <p className="text-xs leading-[1.8]">Deploying models into production without structural logging, tracing, or latency monitoring.</p>
                 </div>
               </div>
 
@@ -79,7 +79,7 @@ export function CompanyStory() {
               {/* Mobile Quote Version */}
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative mt-8 lg:hidden block">
                 <Quote className="w-5 h-5 text-white/30 absolute top-4 left-4" />
-                <p className="text-white/60 font-medium italic relative z-10 pt-2 pl-4 text-sm leading-relaxed">
+                <p className="text-white/60 font-medium italic relative z-10 pt-2 pl-4 text-sm leading-[1.8]">
                   &quot;Startups were treating AI as a feature, but building it like a science project. We needed to bring engineering discipline and operational rigors to language models.&quot;
                 </p>
               </div>

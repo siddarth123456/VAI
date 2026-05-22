@@ -1,11 +1,11 @@
 import type {Metadata} from 'next';
-import { Inter, League_Spartan, Geist, Space_Mono } from 'next/font/google';
+import { Inter, League_Spartan, Geist, Courier_Prime } from 'next/font/google';
 import './globals.css';
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 const leagueSpartan = League_Spartan({ subsets: ['latin'], variable: '--font-display' });
-const spaceMono = Space_Mono({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-mono' });
+const typewriterFont = Courier_Prime({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
   title: 'VerroAI | Enterprise AI Infrastructure & Automations',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={cn(leagueSpartan.variable, spaceMono.variable, "font-sans", geist.variable)}>
+    <html lang="en" className={cn(leagueSpartan.variable, typewriterFont.variable, "font-sans", geist.variable)}>
       <body className="font-sans antialiased" suppressHydrationWarning>{children}</body>
     </html>
   );

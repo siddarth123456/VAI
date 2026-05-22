@@ -37,7 +37,7 @@ export function Infrastructure() {
               whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-white/80 text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-6 shadow-[-4px_4px_15px_rgba(0,0,0,0.5)]"
+              className="font-mono inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/5 border border-white/10 text-white/80 text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-6 shadow-[-4px_4px_15px_rgba(0,0,0,0.5)]"
             >
               <Cpu className="w-3 h-3 text-brand-yellow" />
               Platform Infrastructure

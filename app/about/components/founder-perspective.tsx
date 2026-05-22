@@ -19,8 +19,8 @@ export function FounderPerspective() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <Quote className="w-10 h-10 text-brand-yellow mb-8" />
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-white mb-10 leading-[1.25] tracking-tight">
+              <Quote className="w-10 h-10 text-brand-yellow mb-12" />
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-white mb-12 leading-[1.3] tracking-tight">
                 &quot;We aren&apos;t building just another wrapper. We&apos;re building the infrastructure that the next generation of SaaS companies will rely on. Our goal is to make AI systems <span className="text-brand-gold block sm:inline">boring, predictable, and exceptionally reliable.</span>&quot;
               </h2>
               
@@ -54,11 +54,11 @@ export function FounderPerspective() {
               <h3 className="font-bold text-white font-display text-xl mb-4 relative z-10 flex items-center gap-3">
                 Long-term Vision
               </h3>
-              <p className="text-[14px] text-white/50 leading-relaxed font-mono mb-8 relative z-10">
+              <p className="text-[15px] text-white/50 leading-[1.8] font-mono mb-12 relative z-10">
                 Language models will commoditize, but operational execution will remain a defensible moat. We are building for absolute scale and reliability.
               </p>
               
-              <div className="space-y-6 relative z-10">
+              <div className="space-y-8 relative z-10">
                 {[
                   "Orchestrating multi-agent state machines.",
                   "Zero-trust execution sandboxing.",
@@ -72,7 +72,7 @@ export function FounderPerspective() {
                     className="flex items-start gap-4 group"
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-amber-200 group-hover:bg-brand-yellow mt-2 shrink-0 transition-colors duration-300" />
-                    <p className="text-[13px] text-white/60 font-medium leading-relaxed group-hover:text-white transition-colors duration-300">{item}</p>
+                    <p className="text-[13px] text-white/60 font-medium leading-[1.8] group-hover:text-white transition-colors duration-300">{item}</p>
                   </motion.div>
                 ))}
               </div>

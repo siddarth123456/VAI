@@ -9,9 +9,9 @@ export function AboutCTA() {
     <section className="w-full pt-12">
       <div className="border-t border-white/10 bg-[#0A0A0A] relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center px-6 py-24 sm:py-32 relative z-10">
-          <span className="text-brand-gold uppercase tracking-widest font-bold text-[11px] mb-6 block font-mono">Next Steps</span>
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-medium text-white mb-6 tracking-tight">Partner with VerroAI</h2>
-          <p className="text-white/50 font-mono text-[15px] sm:text-base mb-10 max-w-2xl mx-auto leading-relaxed">
+          <span className="text-brand-gold uppercase tracking-widest font-bold text-[11px] mb-12 block font-mono">Next Steps</span>
+          <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-medium text-white mb-12 tracking-tight">Partner with VerroAI</h2>
+          <p className="text-white/50 font-mono text-[16px] sm:text-[17px] mb-12 max-w-2xl mx-auto leading-[1.8]">
             Bring operational intelligence to your AI-native software. Let&apos;s discuss your infrastructure requirements and deployment goals.
           </p>
           

@@ -64,7 +64,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link 
               href="/book-demo" 
-              className="group flex items-center gap-2 bg-[#111111] text-white text-[13px] font-bold px-5 py-2 md:py-2.5 rounded-full hover:bg-black hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="group flex items-center gap-2 bg-[#111111] text-white text-[13px] font-mono font-bold px-5 py-2 md:py-2.5 rounded-full hover:bg-black hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               Book Demo
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

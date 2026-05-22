@@ -51,7 +51,7 @@ export function WhyVerro() {
             {reasons.map((r, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                 <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-brand-yellow flex-shrink-0 drop-shadow-[0_0_8px_rgba(231,200,90,0.5)]" />
-                <span className="font-semibold text-[14px] sm:text-[15px] text-white/90 drop-shadow-sm">{r}</span>
+                <span className="font-mono font-semibold text-[14px] sm:text-[15px] text-white/90 drop-shadow-sm">{r}</span>
               </div>
             ))}
           </motion.div>

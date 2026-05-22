@@ -18,11 +18,11 @@ export function OperationalPhilosophy() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 text-white">
           <div>
-            <span className="text-brand-yellow uppercase tracking-widest font-bold text-[11px] mb-6 block font-mono">Core Philosophy</span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium mb-6 leading-[1.1] tracking-tight">
+            <span className="text-brand-yellow uppercase tracking-widest font-bold text-[11px] mb-12 block font-mono">Core Philosophy</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-medium mb-12 leading-[1.15] tracking-tight">
               Deterministic outcomes in probabilistic environments.
             </h2>
-            <p className="text-white/40 font-mono text-[15px] leading-relaxed mb-8">
+            <p className="text-white/40 font-mono text-[16px] leading-[1.8] mb-12">
               We believe that enterprise reliability doesn&apos;t have to mean enterprise bloat. Startups need speed, but not at the cost of operational integrity. Building with AI shouldn&apos;t feel like a black box.
             </p>
             <ul className="space-y-5">
@@ -40,19 +40,19 @@ export function OperationalPhilosophy() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-[#0A0A0A]/5 border border-white/10 rounded-3xl p-6 backdrop-blur-md">
-              <Activity className="w-5 h-5 text-white/40 mb-6" />
+              <Activity className="w-5 h-5 text-white/40 mb-12" />
               <div className="text-2xl font-display font-medium text-white mb-1">Total Observability</div>
-              <p className="text-[13px] text-white/40 font-mono leading-relaxed">Full execution tracing across all agent workflows.</p>
+              <p className="text-[14px] text-white/40 font-mono leading-[1.8]">Full execution tracing across all agent workflows.</p>
             </div>
             <div className="bg-[#0A0A0A]/5 border border-white/10 rounded-3xl p-6 backdrop-blur-md">
-              <Zap className="w-5 h-5 text-brand-yellow mb-6" />
+              <Zap className="w-5 h-5 text-brand-yellow mb-12" />
               <div className="text-2xl font-display font-medium text-white mb-1">State Managed</div>
-              <p className="text-[13px] text-white/40 font-mono leading-relaxed">Persistent state transitions without external databases.</p>
+              <p className="text-[14px] text-white/40 font-mono leading-[1.8]">Persistent state transitions without external databases.</p>
             </div>
             <div className="bg-[#0A0A0A]/5 border border-white/10 rounded-3xl p-6 backdrop-blur-md sm:col-span-2">
-              <Shield className="w-5 h-5 text-emerald-400 mb-6" />
+              <Shield className="w-5 h-5 text-emerald-400 mb-12" />
               <div className="text-2xl font-display font-medium text-white mb-1">Enterprise-Grade Security</div>
-              <p className="text-[13px] text-white/40 font-mono leading-relaxed max-w-sm">SOC 2 compliant infrastructure with strict data isolation and zero-trust execution sandboxing.</p>
+              <p className="text-[14px] text-white/40 font-mono leading-[1.8] max-w-sm">SOC 2 compliant infrastructure with strict data isolation and zero-trust execution sandboxing.</p>
             </div>
           </div>
         </div>

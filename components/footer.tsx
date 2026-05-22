@@ -18,23 +18,23 @@ export function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 flex-1 text-left">
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">System Platform</h4>
-            <Link href="/platform" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Platform Overview</Link>
-            <Link href="/workflows" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">AI Workflows</Link>
+            <Link href="/platform" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Platform Overview</Link>
+            <Link href="/workflows" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">AI Workflows</Link>
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Company</h4>
-            <Link href="/about" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">About VerroAI</Link>
-            <Link href="/team" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Our Team</Link>
+            <Link href="/about" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">About VerroAI</Link>
+            <Link href="/team" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Our Team</Link>
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Contact</h4>
-            <Link href="/book-demo" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Book a Demo</Link>
-            <Link href="/contact" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Contact Us</Link>
+            <Link href="/book-demo" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Book a Demo</Link>
+            <Link href="/contact" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Contact Us</Link>
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Legal</h4>
-            <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Terms of Service</Link>
+            <Link href="/" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/" className="font-mono text-white/50 text-sm md:text-[14px] hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ export function DashboardShowcase() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/10 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-4 md:mb-6 shadow-[0_0_15px_rgba(231,200,90,0.15)]"
+              className="font-mono inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-brand-yellow/10 border border-brand-yellow/20 text-brand-gold text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase mb-4 md:mb-6 shadow-[0_0_15px_rgba(231,200,90,0.15)]"
             >
               <Sparkles className="w-3 h-3" />
               Platform Intelligence
@@ -68,7 +68,7 @@ export function DashboardShowcase() {
             transition={{ delay: 0.3 }}
             className="w-full lg:w-auto px-2 lg:px-0"
           >
-            <Link href="/book-demo" className="flex-shrink-0 group flex items-center justify-center gap-2 bg-white text-black px-8 py-3.5 md:py-4 rounded-full font-bold hover:bg-white/90 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] w-full lg:w-auto text-[15px] md:text-base">
+            <Link href="/book-demo" className="font-mono font-bold flex-shrink-0 group flex items-center justify-center gap-2 bg-white text-black px-8 py-3.5 md:py-4 rounded-full hover:bg-white/90 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] w-full lg:w-auto text-[15px] md:text-base">
               Explore Interactive Demo
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>

@@ -24,7 +24,7 @@ export function AboutHero() {
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0A0A0A] border border-white/10 shadow-none text-white/50 text-[11px] font-bold tracking-[0.15em] uppercase mb-10"
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0A0A0A] border border-white/10 shadow-none text-white/50 text-[11px] font-bold tracking-[0.15em] uppercase mb-12"
       >
         <Sparkles className="w-3.5 h-3.5 text-brand-yellow" />
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">Our Genesis</span>
@@ -35,7 +35,7 @@ export function AboutHero() {
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="text-[44px] leading-[1.05] sm:text-6xl lg:text-[76px] font-medium font-display tracking-tight text-white mb-8"
+        className="text-[44px] leading-[1.1] sm:text-6xl lg:text-[76px] font-medium font-display tracking-tight text-white mb-12"
       >
         AI Operational Intelligence <br className="hidden md:block" />
         for <span className="text-white/40">Modern Startups.</span>
@@ -46,7 +46,7 @@ export function AboutHero() {
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="text-lg sm:text-xl text-white/50 font-mono leading-relaxed max-w-2xl mx-auto mb-16"
+        className="text-lg sm:text-xl text-white/50 font-mono leading-[1.8] max-w-2xl mx-auto mb-16"
       >
         We build the visibility, control, and automation infrastructure that technical founders need to scale AI systems predictably.
       </motion.p>
