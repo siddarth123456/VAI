@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
-import { Database, Workflow, Shield, Network, Zap, Cpu, ArrowRight } from 'lucide-react';
+import { Database, Workflow, Shield, Network, Zap, Cpu, ArrowUpRight } from 'lucide-react';
 
 const features = [
   {
@@ -51,8 +51,8 @@ export function Features() {
               VerroAI combines the performance of native cloud infrastructure with the adaptability of foundation models.
             </p>
           </div>
-          <button className="flex items-center gap-2 text-[14px] md:text-[15px] font-bold text-brand-yellow hover:text-brand-amber transition-colors mt-2 md:mt-0">
-            Explore Documentation <ArrowRight className="w-4 h-4" />
+          <button className="flex items-center gap-2 text-[14px] md:text-[15px] font-bold text-brand-yellow hover:text-brand-amber transition-colors mt-2 md:mt-0 group">
+            Explore Documentation <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </button>
         </motion.div>
 

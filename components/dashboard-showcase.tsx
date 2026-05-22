@@ -10,7 +10,7 @@ import {
   Cpu, 
   GitBranch, 
   Activity,
-  ArrowRight,
+  ArrowUpRight,
   Sparkles,
   Search,
   Clock,
@@ -68,9 +68,9 @@ export function DashboardShowcase() {
             transition={{ delay: 0.3 }}
             className="w-full lg:w-auto px-2 lg:px-0"
           >
-            <Link href="/analytics" className="flex-shrink-0 group flex items-center justify-center gap-2 bg-white text-black px-8 py-3.5 md:py-4 rounded-full font-bold hover:bg-white/90 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] w-full lg:w-auto text-[15px] md:text-base">
+            <Link href="/book-demo" className="flex-shrink-0 group flex items-center justify-center gap-2 bg-white text-black px-8 py-3.5 md:py-4 rounded-full font-bold hover:bg-white/90 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.2)] w-full lg:w-auto text-[15px] md:text-base">
               Explore Interactive Demo
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </Link>
           </motion.div>
         </div>

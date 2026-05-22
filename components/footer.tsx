@@ -20,28 +20,21 @@ export function Footer() {
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">System Platform</h4>
             <Link href="/platform" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Platform Overview</Link>
             <Link href="/workflows" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">AI Workflows</Link>
-            <Link href="/automations" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Automations</Link>
-            <Link href="/enterprise" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Enterprise SLA</Link>
-          </div>
-          <div className="flex flex-col gap-3 md:gap-4">
-            <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Telemetry</h4>
-            <Link href="/analytics" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">System Analytics</Link>
-            <Link href="/ai-insights" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Trace Insights</Link>
-            <Link href="/demo" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Sandbox Simulator</Link>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">GitHub Source</a>
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Company</h4>
             <Link href="/about" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">About VerroAI</Link>
             <Link href="/team" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Our Team</Link>
-            <Link href="/demo" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Book a Demo</Link>
-            <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Contact Team</Link>
+          </div>
+          <div className="flex flex-col gap-3 md:gap-4">
+            <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Contact</h4>
+            <Link href="/book-demo" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Book a Demo</Link>
+            <Link href="/contact" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Contact Team</Link>
           </div>
           <div className="flex flex-col gap-3 md:gap-4">
             <h4 className="text-white text-sm font-semibold mb-1 md:mb-3">Legal</h4>
             <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Terms of Service</Link>
-            <Link href="/" className="text-white/50 text-sm md:text-[15px] hover:text-white transition-colors">Security</Link>
           </div>
         </div>
       </div>
