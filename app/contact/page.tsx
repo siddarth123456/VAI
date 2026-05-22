@@ -31,7 +31,7 @@ export default function ContactPage() {
       <div className="grain-overlay" />
       <Navbar />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 relative z-10 w-full flex-grow">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24 relative z-10 w-full flex-grow">
         
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-16">

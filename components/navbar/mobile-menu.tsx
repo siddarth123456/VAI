@@ -40,9 +40,9 @@ export function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
             aria-label="Mobile navigation"
           >
             <div className="flex items-center justify-between p-6 border-b border-white/10">
-              <Link href="/" className="flex items-center gap-2.5 group outline-none focus-visible:ring-2 focus-visible:ring-white/20 rounded-md" onClick={() => setIsOpen(false)}>
-                <span className="w-6 h-6 rounded bg-gradient-to-br from-brand-gold to-brand-amber flex items-center justify-center text-white text-xs font-black shadow-sm group-hover:scale-105 transition-transform duration-300">✦</span>
-                <span className="text-white font-bold font-display text-[17px] tracking-tight">VerroAI</span>
+              <Link href="/" className="flex items-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-white/20 rounded-md" onClick={() => setIsOpen(false)}>
+                <span className="w-6 h-6 rounded bg-gradient-to-br from-brand-yellow to-brand-amber flex items-center justify-center text-white text-[10px] font-black shadow-sm group-hover:scale-105 transition-transform duration-300">✦</span>
+                <span className="text-white font-bold font-display text-[30px] tracking-tight leading-none mt-1">VerroAI</span>
               </Link>
               <button 
                 className="text-white/80 p-2 -mr-2 outline-none focus-visible:ring-2 focus-visible:ring-white/20 rounded-md bg-white/5 hover:bg-white/10 transition-colors"

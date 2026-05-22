@@ -14,7 +14,7 @@ export default function TeamPage() {
     <main id="team-page" className="min-h-screen bg-[#020202] text-white selection:bg-brand-yellow selection:text-black overflow-hidden flex flex-col justify-between relative">
       <Navbar />
 
-      <div className="max-w-5xl mx-auto px-6 pt-40 pb-24 relative z-10 w-full flex-grow">
+      <div className="max-w-[1440px] mx-auto px-4 md:px-8 pt-40 pb-24 relative z-10 w-full flex-grow">
         <TeamHero />
         <FounderProfile />
         <WhyVerro />

@@ -33,7 +33,7 @@ export function Features() {
       
       <div className="ambient-glow bg-[#D4AF37]/10 w-[600px] h-full left-0 top-1/2 -translate-y-1/2" />
 
-      <div className="max-w-7xl w-full">
+      <div className="max-w-[1440px] w-full">
         
         <motion.div 
           initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}

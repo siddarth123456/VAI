@@ -48,7 +48,7 @@ export function WorkflowEcosystem() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full max-w-5xl relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full max-w-[1440px] relative z-20">
           {/* Connector Line (Background) */}
           <div className="hidden md:block absolute top-[60px] left-[15%] right-[15%] border-t-[3px] border-white/5 border-dashed -z-10"></div>
           
