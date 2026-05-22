@@ -18,8 +18,8 @@ export function NavLink({ href, name, isActive, onClick, isMobile = false }: Nav
       <Link 
         href={href} 
         onClick={onClick} 
-        className={`flex items-center justify-between px-4 py-3.5 text-base font-semibold transition-all rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-black/20 ${
-          isActive ? 'bg-black/5 text-black' : 'text-black/60 hover:text-black hover:bg-black/[0.02]'
+        className={`flex items-center justify-between px-4 py-3.5 text-base font-semibold transition-all rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-white/20 ${
+          isActive ? 'bg-white/10 text-white' : 'text-white/60 hover:text-white hover:bg-white/5'
         }`}
       >
         {name}
@@ -32,7 +32,7 @@ export function NavLink({ href, name, isActive, onClick, isMobile = false }: Nav
     <Link 
       href={href} 
       className={`relative outline-none focus-visible:ring-2 focus-visible:ring-black/20 rounded-md transition-colors duration-200 ${
-        isActive ? 'text-black' : 'text-black/50 hover:text-black'
+        isActive ? 'text-black' : 'text-black/60 hover:text-black'
       }`}
     >
       {name}

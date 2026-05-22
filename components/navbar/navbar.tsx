@@ -31,13 +31,14 @@ export function Navbar() {
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center w-full px-4 pt-6 pointer-events-none"
       >
         <nav 
-          className={`pointer-events-auto flex items-center justify-between w-full max-w-5xl rounded-full px-6 py-3 md:py-3.5 transition-all duration-300 ${
+          className={`pointer-events-auto flex items-center justify-between w-full max-w-5xl rounded-full px-6 py-3 md:py-3.5 transition-all duration-300 relative overflow-hidden isolate ${
             scrolled 
-              ? 'bg-[#FCFBF9]/95 border border-black/[0.08] backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.06)]' 
-              : 'bg-[#FCFBF9] border border-black/5 shadow-sm'
+              ? 'bg-white/80 border border-white/20 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.1)]' 
+              : 'bg-white/70 backdrop-blur-lg border border-white/10 shadow-sm'
           }`}
           aria-label="Main Navigation"
         >
+          <div className="absolute inset-0 opacity-[0.25] mix-blend-overlay pointer-events-none -z-10" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group outline-none focus-visible:ring-2 focus-visible:ring-black/20 rounded-md">
             <span className="w-6 h-6 rounded bg-gradient-to-br from-brand-gold to-brand-amber flex items-center justify-center text-white text-xs font-black shadow-sm group-hover:scale-105 transition-transform duration-300">✦</span>
@@ -63,7 +64,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link 
               href="/book-demo" 
-              className="group flex items-center gap-2 bg-[#111111] text-white text-[13px] font-bold px-5 py-2 md:py-2.5 rounded-full hover:bg-black hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2"
+              className="group flex items-center gap-2 bg-[#111111] text-white text-[13px] font-bold px-5 py-2 md:py-2.5 rounded-full hover:bg-black hover:shadow-[0_4px_20px_rgba(0,0,0,0.15)] transition-all outline-none focus-visible:ring-2 focus-visible:ring-black/20 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
               Book Demo
               <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
